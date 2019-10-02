@@ -1,0 +1,586 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+ Tricks 
+*/
+ul {
+    display: table;
+    width: 100%;
+}
+
+li {
+    display: table-cell;
+    text-align: center;
+}
+
+/* THIN */
+
+@font-face {
+    font-family: "Helvetica-thin";
+    src: url("../fonts/HelveticaNeueLTStd-Th.otf");
+}
+
+/* LIGHT */
+@font-face {
+    font-family: "Helvetica-light";
+    src: url("../fonts/HelveticaNeueLTStd-Lt.otf");
+}
+@font-face {
+    font-family: "Helvetica-light-italic";
+    src: url("../fonts/HelveticaNeueLTStd-LtIt.otf");
+}
+/* MEDIUM */
+@font-face {
+    font-family: "Helvetica-medium";
+    src: url("../fonts/HelveticaNeueLTStd-Md.otf");
+}
+@font-face {
+    font-family: "Helvetica-medium-italic";
+    src: url("../fonts/HelveticaNeueLTStd-MdIt.otf");
+}
+
+/* BOLD */
+@font-face {
+    font-family: "Helvetica-bold";
+    src: url("../fonts/HelveticaNeueLTStd-Bd.otf");
+}
+
+/* BLACK */
+@font-face {
+    font-family: "Helvetica-black";
+    src: url("../fonts/HelveticaNeueLTStd-Blk.otf");
+}
+
+@font-face {
+    font-family: "Helvetica-black-italic";
+    src: url("../fonts/HelveticaNeueLTStd-BlkIt.otf");
+}
+/* HEAVY */
+@font-face {
+    font-family: "Helvetica-heavy";
+    src: url("../fonts/HelveticaNeueLTStd-Hv.otf");
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.reset {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ BEGIN
+*/
+
+body {
+    font-family: "Helvetica-light", Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+header > * {
+    margin: 0 auto;
+}
+
+header > div { /* TO REMOVE */
+    text-align: center;
+}
+
+section {
+    max-width: 1480px;
+    padding: 1.5em;
+    text-align: center;
+}
+
+footer.menu.menu_bot > ul.container > li > div {
+    border-right: 1px solid black;
+}
+
+/* 
+ Big blocks
+*/
+@media (min-width: 1480px) {
+  .container {
+    min-width: 1480px;
+    max-width: 1480px; /* desired width */
+  }
+}
+
+#carouselpoule {
+    padding: 0;
+    margin-bottom: 1.5em;
+}
+
+#carouselpoule img {
+    width: 100%;
+}
+
+.bandeau {
+    background-color: #EFC73D;
+    margin-bottom: 1.5em;
+}
+
+.bandeau li {
+    padding: 1em;
+}
+
+.bandeau img {
+    height: 80px; 
+}
+
+.bandeau a:hover {
+    color: #AF1D1F;
+    text-decoration: none;
+}
+
+.bandeau p {
+    padding-top: 1em;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*
+ Menus
+*/
+.menu > ul {
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+.menu > ul > li {
+     padding: 0.6em 0;
+}
+
+.menu_client {
+    background-color: #EFC73D;
+    color: #AF1D1F;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_client > div > img {
+    width: 80px;
+    margin: 8px 0.5em 0 0;
+    height: 64px;
+    display: block;
+}
+
+.menu_client > div {
+    margin: 0 1em;
+}
+
+.menu_client > .left {
+    font-size: 20px;
+    line-height: 90px;
+}
+
+.menu_client > .right {
+   font-size: 13px;
+   line-height: 30px;
+}
+
+.menu_client_txt {
+    font-family: "Helvetica-medium", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.menu_bot {
+    background-color: #b1b1b0;
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 1.5em;
+}
+
+.menu_bot ul li > a {
+    font-family:"Helvetica-light", Helvetica, Arial, sans-serif;
+    color: black;
+    border-right: 1px solid black;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu_bot ul > li:first-child > a {
+    border-left: 1px solid black;
+}
+
+.menu_bot ul > li:hover {
+    color: #EFC73D;
+}
+
+.menu_bot ul > li:hover > a {
+    color: #EFC73D;
+}
+
+.menu_bot ul li > div > a {
+    display: inline;
+}
+
+.menu_bot img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.menu_top {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color: #AF1D1F;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu_top ul li a {
+    color: #AF1D1F;
+    border-right: 1px solid #AF1D1F;
+    width: 100%;
+    display: inline-block;
+    padding: 0.6em;
+    text-decoration: none;
+}
+
+.menu_top ul > li:first-child a {
+    border-left: 1px solid #AF1D1F;
+}
+
+.menu_top ul > li:hover {
+    color: #EFC73D;
+}
+
+.menu_top ul > li:hover a {
+    color: #EFC73D;
+}
+
+/*
+ Tools
+*/
+.button {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    width: 223px;
+    height: 55px;
+    line-height: 55px;
+    border: 2px solid #AF1D1F;
+    background-color: #AF1D1F;
+}
+
+a.button:hover {
+    text-decoration: none;
+    color: #EFC73D;
+}
+
+div.carousel-caption p {
+    font-size: 24px;
+}
+
+/*
+ Sections
+*/
+
+section > h1 {
+    font-family: "Helvetica-heavy", Helvetica, Arial, sans-serif;
+    font-size: 44px;
+    line-height: 45px;
+}
+
+section > h2 {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    font-size: 35px;
+    line-height: 37px;
+}
+
+section h3 {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color: #AF1D1F;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+section > p {
+    font-family: "Helvetica-thin", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 1em;
+}
+
+section > ul {
+    margin-top: 1em;
+}
+
+section > ul > li {
+    width: 50%;
+    padding: 1em;
+}
+
+section.pack li:first-child {
+    vertical-align: middle;
+    display: inline-block;
+    width: 50%;
+}
+
+section.pack li:nth-child(2) {
+    vertical-align: middle;
+    display: inline-block;
+    width: 49%;
+}
+
+section.raisons > ul > li p.raison {
+    left: -84px;
+}
+
+/* Start section OFFERS */
+
+.offers > ul > li:first-child {
+    border-right: 2px solid rgba(175, 29, 31, 0.1);
+}
+
+.offers a:hover {
+    color: #EFC73D;
+    text-decoration: none;
+}
+
+.pack2 {
+    font-family: "Helvetica-medium", Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    line-height: 38px;
+}
+
+.price {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color:#EFC73D;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+.salon {
+    font-family: "Helvetica-Lt", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 0.6em;
+}
+
+.price2 {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color:#b1b1b0;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.button-txt {
+    font-family: "Helvetica-Bold", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Ending section OFFERS */
+
+/* Start section PACK */
+
+.pack-txt p {
+    font-family: "Helvetica-Lt", Helvetica, Arial, sans-serif;
+    font-size: 25px;  
+    line-height: 30px;
+    text-align: left;
+    margin-left: 2em;
+}
+
+.mini-txt {
+    font-family: "Helvetica-thin", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.red {
+    font-family: "Helvetica-heavy", Helvetica, Arial, sans-serif;
+    color: #AF1D1F;
+    font-size: 41px;
+    line-height: 45px;
+}
+
+.yel {
+    font-family: "Helvetica-heavy", Helvetica, Arial, sans-serif;
+    color: #EFC73D;
+    font-size: 41px;
+    line-height: 45px;
+}
+
+/* Ending section PACK */
+
+/* Start section COMPETENCES */
+
+.competences ul li {
+    padding: 0;
+    width: 50%;
+}
+
+.competences ul li div {
+    padding: 7%;
+    width: 100%;
+}
+
+.competences img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.competences a {
+    margin-top: 5%;
+}
+
+.competences .left {
+    border-right: 2px solid rgba(175, 29, 31, 0.1);
+}
+
+.competences .borbot {
+    border-bottom: 2px solid rgba(175, 29, 31, 0.1);
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Ending section COMPETENCES */
+
+/* Start section SAVOIR */
+
+.savoir > ul > li {
+    padding: 7%;
+}
+
+.savoir img {
+    width: 100%;
+    height: 400px;
+}
+
+.savoir div {
+    position: relative;
+    height: 400px;
+}
+
+.savoir div.wrapper {
+    top: -400px;
+}
+
+.savoir div p {
+    font-family: "Helvetica-heavy", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 26px;
+    line-height: 35px;
+    margin-top: 165px;
+}
+
+/* Ending section SAVOIR */
+
+/* Start section RAISONS */
+
+.raisons ul {
+    display: block;
+}
+
+.raisons ul li {
+    width: 50%;
+    display: block;
+}
+
+.raisons div {
+    font-family: "Helvetica-heavy", Helvetica, Arial, sans-serif;
+    position: relative;
+    margin-left: 25px;
+    float: left;
+    font-size: 100px;
+    color: rgba(175, 29, 31, 0.4);
+}
+
+
+.raisons p {
+    font-size: 25px;
+    left: -22px;
+    margin-top: 22px;
+    position: relative;
+    top: 0px;
+    text-align: left;
+}
+
+/* Ending section RAISONS */
+
+/*
+ Footer
+*/
+.disclaimer {
+    font-family: "Helvetica-thin", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    background-color: #AF1D1F;
+    text-align: center;
+    color: white;
+    padding: 1em;
+}

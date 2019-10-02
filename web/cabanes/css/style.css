@@ -1,0 +1,1957 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css";
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700";
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url('../fonts/Quicksand-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url('../fonts/Quicksand-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: AdventPro-Bold;
+  src: url('../fonts/AdventPro-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeueLTStd-thin;
+  src: url('../fonts/HelveticaNeueLTStd-thin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeueLTStd-fin;
+  src: url('../fonts/HelveticaNeueLTStd-fin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+body {
+  font-family: "Quicksand-Regular", Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+#top_arrow {
+  display: none;
+  position: fixed;
+  top: calc(100% - 80px);
+  left: calc(100% - 80px);
+  font-size: 60px;
+  color: #8a6d62;
+  z-index: 25;
+}
+.slide1 {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .slide1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .slide1 {
+    margin-bottom: 6%;
+  }
+}
+.slide1 div.head {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+.slide1 div.anchor {
+  position: relative;
+}
+.slide1 div.absolute_head {
+  position: absolute;
+  height: calc(100vh - 90px);
+}
+@media screen and (max-width: 950px) {
+  .slide1 div.absolute_head {
+    height: calc(100vh - 60px);
+  }
+}
+.slide1 nav.top {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+}
+.slide1 nav.top span {
+  text-align: center;
+}
+.slide1 nav.top span.fa-bars {
+  width: 110px;
+  visibility: hidden;
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.top span.fa-bars {
+    width: auto;
+    padding: 0.5em;
+    padding-right: 0em;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 950px) {
+  .slide1 nav.top span.fa-bars {
+    display: none;
+  }
+}
+.slide1 nav.top a.resa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  align-self: stretch;
+  margin-left: auto;
+  font-family: "AdventPro-Bold", sans-serif;
+  background-color: #ccdb38;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.top a.resa {
+    font-size: 20px;
+    width: auto;
+    flex: 1;
+    padding: 0.4em;
+    margin-left: 0.4em;
+  }
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.top a.logo {
+    width: 40%;
+  }
+}
+.slide1 nav.top img {
+  height: 90px;
+  padding: 10px;
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.top img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+}
+.slide1 header {
+  width: calc(100% - 112px);
+  z-index: -100;
+  margin-left: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/bg.jpg");
+  -webkit-background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/bg.jpg");
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1200px) {
+  .slide1 header {
+    width: calc(100% - 102px);
+  }
+}
+@media screen and (max-width: 950px) {
+  .slide1 header {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/bg.jpg");
+    -webkit-background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/bg.jpg");
+    width: 100%;
+    background-size: 220% 120%;
+  }
+}
+.slide1 header .text_header {
+  width: 40%;
+  height: 60%;
+  margin-top: 6%;
+  margin-left: 10%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #fff;
+}
+@media screen and (max-width: 950px) {
+  .slide1 header .text_header {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    margin: 0;
+  }
+}
+.slide1 header .text_header div.desc h1 {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  font-size: 80%;
+  flex: 1;
+  text-align: center;
+}
+.slide1 header .text_header div.desc h1 .border {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: 1em 3em;
+  line-height: 120%;
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 950px) {
+  .slide1 header .text_header div.desc h1 .border {
+    padding: 1em;
+  }
+}
+.slide1 header .text_header div.desc h1 .nocaps {
+  text-transform: none;
+  line-height: 200%;
+}
+.slide1 header .text_header div.accroche {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-flow: column;
+  align-self: flex-end;
+  width: 100%;
+  line-height: 120%;
+}
+.slide1 header .text_header .first {
+  padding-top: 1em;
+}
+.slide1 header .text_header div.accroche span.first {
+  display: inline-block;
+  animation: fadeinleft 2s;
+  -webkit-animation: fadeinleft 2s;
+}
+.slide1 header .text_header div.accroche span.second {
+  opacity: 0;
+  animation: fadeinleft 2s ease-out 1s forwards;
+  -webkit-animation: fadeinleft 2s ease-out 1s forwards;
+}
+.slide1 nav.left {
+  display: flex;
+  flex-flow: column;
+  z-index: 2;
+  position: absolute;
+  align-items: flex-start;
+  height: 100%;
+  width: auto;
+  padding: 0.7em 0;
+  white-space: nowrap;
+  background-color: white;
+  font-size: 40px;
+  transition: left 0.25s linear;
+  -webkit-transition: left 0.25s linear;
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.left {
+    left: -100vw;
+    font-size: 30px;
+  }
+}
+.slide1 nav.left .text {
+  height: 100%;
+  position: relative;
+}
+.slide1 nav.left span.hidden {
+  margin-left: 1em;
+  font-size: 0;
+  transition: font-size 0.5s ease-out;
+  -webkit-transition: font-size 0.5s ease-out;
+}
+.slide1 nav.left a {
+  display: flex;
+  align-items: center;
+  padding: 0.3em 36px;
+  color: #8a6d62;
+  text-decoration: none;
+}
+.slide1 nav.left a:hover {
+  color: #ffb500;
+}
+.slide1 nav.left a.lang {
+  font-size: 20px;
+  padding-left: 42px;
+}
+@media screen and (max-width: 1200px) {
+  .slide1 nav.left a.lang {
+    font-size: 16px;
+  }
+}
+.slide1 nav.left a.space {
+  margin-top: auto;
+}
+.slide1 nav.left #carre {
+  position: absolute;
+  top: 100%;
+  padding: 0.3em 36px;
+  color: transparent;
+  background-color: #ccdb38;
+}
+.slide1 nav.left:hover, .slide1 nav.hover {
+  left: 0;
+}
+.slide1 nav.left:hover span.hidden, .slide1 nav.hover span.hidden {
+  font-size: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .slide1 nav.left:hover span.hidden, .slide1 nav.hover span.hidden {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .slide1 nav.left:hover span.hidden, .slide1 nav.hover span.hidden {
+    font-size: 18px;
+  }
+}
+.absolute_slide1 {
+  height: auto;
+  min-height: auto;
+}
+#slide2 {
+  display: flex;
+  flex-flow: row-reverse;
+  width: 100%;
+  margin-bottom: 6%;
+}
+@media screen and (max-width: 950px) {
+  #slide2 {
+    flex-flow: column;
+  }
+}
+#slide2 section {
+  width: calc(55% - 112px);
+  display: flex;
+  flex-flow: column;
+  padding: 3em;
+}
+@media screen and (max-width: 950px) {
+  #slide2 section {
+    width: 100%;
+  }
+}
+#slide2 section .titre {
+  font-family: "AdventPro-Bold", sans-serif;
+}
+@media screen and (max-width: 950px) {
+  #slide2 section .titre {
+    font-size: 20px;
+  }
+}
+#slide2 section h1.titre {
+  margin: 0;
+  font-size: 30px;
+}
+#slide2 section h2.titre {
+  margin: 0;
+  font-size: 25px;
+}
+#slide2 section .green {
+  color: #ccdb38;
+}
+#slide2 section p {
+  text-align: justify;
+}
+#slide2 section a {
+  color: #ccdb38;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #ccdb38;
+  text-decoration: none;
+}
+#slide2 section a:hover {
+  color: #b7ca00;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #b7ca00;
+  text-decoration: none;
+}
+#slide2 aside {
+  width: 40%;
+  height: 0;
+}
+@media screen and (max-width: 950px) {
+  #slide2 aside {
+    width: 100%;
+    height: auto;
+  }
+}
+#slide2 aside div {
+  position: relative;
+  top: -4vw;
+}
+@media screen and (max-width: 950px) {
+  #slide2 aside div {
+    top: 0;
+  }
+}
+#slide2 aside div div {
+  background: url("../img/spa-mini.jpg") center no-repeat;
+  background-size: 100% 120%;
+}
+#slide2 aside div img {
+  width: 100%;
+  visibility: hidden;
+}
+#types, #activites {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin-bottom: 6%;
+  position: relative;
+}
+#types .back, #activites .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 1.6em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+#types .back div, #activites .back div {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 950px) {
+  #types .back div, #activites .back div {
+    width: 100%;
+  }
+}
+#types .back div div, #activites .back div div {
+  width: 530px;
+  height: 50%;
+  margin: 0;
+  background-color: #ffb500;
+}
+@media screen and (max-width: 950px) {
+  #types .back div div, #activites .back div div {
+    width: 100%;
+  }
+}
+#types .back div div span, #activites .back div div span {
+  padding: 1em;
+}
+#types .back div div:last-child, #activites .back div div:last-child {
+  align-self: flex-end;
+}
+#types .back div div:last-child span, #activites .back div div:last-child span {
+  margin-top: auto;
+}
+@media screen and (max-width: 950px) {
+  #types .back div div:first-child, #activites .back div div:first-child {
+    width: 100%;
+  }
+}
+#types .front, #activites .front {
+  width: 100%;
+  margin: 3.8em 0;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (max-width: 950px) {
+  #types .front, #activites .front {
+    margin: 6em 0;
+  }
+}
+#types .front div.slide, #activites .front div.slide {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#types .front div.slide div.tuile, #activites .front div.slide div.tuile {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 1em;
+  background-color: rgba(255, 181, 0, 0.7);
+}
+@media screen and (max-width: 950px) {
+  #types .front div.slide div.tuile, #activites .front div.slide div.tuile {
+    width: 100%;
+    height: 100%;
+    margin: 1em 0;
+  }
+}
+#types .front div.slide div.tuile img, #activites .front div.slide div.tuile img {
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+@media screen and (max-width: 950px) {
+  #types .front div.slide div.tuile img, #activites .front div.slide div.tuile img {
+    width: 100%;
+  }
+}
+#types .front div.slide div.tuile div.desc, #activites .front div.slide div.tuile div.desc, #types .front div.slide div.tuile a.desc, #activites .front div.slide div.tuile a.desc {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+  -webkit-background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+  color: #fff;
+  text-decoration: none;
+}
+@media screen and (max-width: 950px) {
+  #types .front div.slide div.tuile div.desc, #activites .front div.slide div.tuile div.desc, #types .front div.slide div.tuile a.desc, #activites .front div.slide div.tuile a.desc {
+    height: 100%;
+    top: 0;
+  }
+}
+#types .front div.slide div.tuile div.desc .titre, #activites .front div.slide div.tuile div.desc .titre, #types .front div.slide div.tuile a.desc .titre, #activites .front div.slide div.tuile a.desc .titre {
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 26px;
+  margin: 0;
+}
+@media screen and (max-width: 950px) {
+  #types .front div.slide div.tuile div.desc .titre, #activites .front div.slide div.tuile div.desc .titre, #types .front div.slide div.tuile a.desc .titre, #activites .front div.slide div.tuile a.desc .titre {
+    font-size: 20px;
+  }
+}
+#types .front div.slide div.tuile div.desc .caps, #activites .front div.slide div.tuile div.desc .caps, #types .front div.slide div.tuile a.desc .caps, #activites .front div.slide div.tuile a.desc .caps {
+  text-transform: uppercase;
+}
+#types .front div.slide div.tuile div.desc h2, #activites .front div.slide div.tuile div.desc h2, #types .front div.slide div.tuile a.desc h2, #activites .front div.slide div.tuile a.desc h2 {
+  color: #ffb500;
+}
+#types .front div.slide div.tuile div.desc a, #activites .front div.slide div.tuile div.desc a, #types .front div.slide div.tuile a.desc a, #activites .front div.slide div.tuile a.desc a {
+  color: #ffb500;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #ffb500;
+  text-decoration: none;
+}
+#types .front div.slide div.tuile div.desc a:hover, #activites .front div.slide div.tuile div.desc a:hover, #types .front div.slide div.tuile a.desc a:hover, #activites .front div.slide div.tuile a.desc a:hover {
+  color: #ffd774;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #ffd774;
+  text-decoration: none;
+}
+#types .front div.slide div.tuile a.desc, #activites .front div.slide div.tuile a.desc {
+  top: 0;
+  height: 100%;
+  background: transparent;
+}
+#types .front div.slide div.tuile a.desc .titre, #activites .front div.slide div.tuile a.desc .titre {
+  margin-top: 70%;
+}
+#types .front div.slide div.tuile h2.titre.caps, #activites .front div.slide div.tuile h2.titre.caps {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 26px;
+  transition: font-size 1s ease 0s;
+  -webkit-transition: font-size 1s ease 0s;
+}
+#types .front div.slide div.tuile h2:hover.titre.caps, #activites .front div.slide div.tuile h2:hover.titre.caps {
+  color: #fff;
+  opacity: 1;
+  font-size: 35px;
+}
+#stats {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-bottom: 6%;
+}
+#stats .cap_text {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  z-index: 1;
+  font-size: 80px;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #4c4c4c;
+  opacity: 0.5;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  padding: 0 20px;
+  align-self: flex-start;
+}
+@media screen and (max-width: 950px) {
+  #stats .cap_text {
+    display: none;
+  }
+}
+#stats .float_image {
+  position: absolute;
+  width: 40%;
+  max-height: calc(100% - 80px);
+  top: 3em;
+  left: 20px;
+  z-index: 1;
+  background: url('../img/cab.jpg') center no-repeat;
+  background-size: 160% 160%;
+}
+@media screen and (max-width: 950px) {
+  #stats .float_image {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+#stats .float_image img {
+  width: 100%;
+  visibility: hidden;
+}
+#stats .back {
+  opacity: 0.99;
+  -webkit-opacity: 0.99;
+  -moz-opacity: 0.99;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+  background-color: #ccdb38;
+}
+#stats div.bandeau {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  z-index: 0;
+}
+@media screen and (max-width: 950px) {
+  #stats div.bandeau {
+    margin-top: 1em;
+  }
+}
+#stats div.bandeau div {
+  width: 60%;
+  padding: 3em;
+  margin: 0;
+}
+@media screen and (max-width: 950px) {
+  #stats div.bandeau div {
+    width: 100%;
+  }
+}
+#stats div.bandeau div.text {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+#stats div.bandeau div.text .titre {
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 26px;
+  margin: 0;
+}
+@media screen and (max-width: 950px) {
+  #stats div.bandeau div.text .titre {
+    font-size: 20px;
+  }
+}
+#stats div.bandeau div.text h3.titre {
+  font-size: 30px;
+}
+#stats div.bandeau div.text h2.titre {
+  color: #fff;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+#stats div.bandeau div.text a {
+  margin-top: 1em;
+  color: #fff;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+#stats div.bandeau div.text a:hover {
+  color: #ccdb38;
+  background-color: #fff;
+}
+#stats div.bandeau div.text p {
+  margin: 0;
+}
+#stats div.bandeau div.numbers {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#stats div.bandeau div.numbers div {
+  padding: 0;
+}
+#stats div.bandeau div.numbers div.border {
+  width: auto;
+  display: flex;
+  padding: 0 3em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+@media screen and (max-width: 950px) {
+  #stats div.bandeau div.numbers div.border {
+    flex-flow: column;
+  }
+}
+#stats div.bandeau div.numbers div.border div {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+#stats div.bandeau div.numbers div.border div span {
+  white-space: nowrap;
+}
+#stats div.bandeau div.numbers div.border div span.number {
+  font-size: 60px;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #ccdb38;
+  padding: 8px 16px 0 16px;
+}
+#stats div.bandeau div.numbers div.border div span.sub {
+  padding: 0 16px 16px 16px;
+}
+#newsletter {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6%;
+  background-color: #ccdb38;
+}
+@media screen and (max-width: 950px) {
+  #newsletter {
+    flex-flow: column;
+  }
+}
+#newsletter div.bandeau {
+  width: 80%;
+  margin: 5em 0;
+  background: linear-gradient(rgba(204, 219, 56, 0.4), rgba(204, 219, 56, 0.4)), linear-gradient(#fff, #fff);
+  -webkit-background: linear-gradient(rgba(204, 219, 56, 0.4), rgba(204, 219, 56, 0.4)), linear-gradient(#fff, #fff);
+}
+@media screen and (max-width: 950px) {
+  #newsletter div.bandeau {
+    width: 95%;
+    margin: 1em auto;
+  }
+}
+#newsletter div.bandeau div {
+  width: 50%;
+  padding: 1em;
+}
+@media screen and (max-width: 950px) {
+  #newsletter div.bandeau div {
+    width: 100%;
+  }
+}
+#newsletter div.form {
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  left: 50%;
+  top: 10%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 950px) {
+  #newsletter div.form {
+    position: static;
+    width: 95%;
+    margin: 1em auto;
+  }
+}
+#newsletter div.form div {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+#newsletter div.form div div {
+  justify-content: flex-start;
+}
+#newsletter div.form a {
+  margin-top: 1em;
+  color: #ccdb38;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #ccdb38;
+  text-decoration: none;
+}
+#newsletter div.form a:hover {
+  color: #b7ca00;
+  border: 4px solid #b7ca00;
+}
+#newsletter h1, #newsletter h2, #newsletter h3 {
+  margin: 0;
+  text-align: left;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+#newsletter h2 {
+  font-size: 30px;
+  color: black;
+}
+#newsletter h3 {
+  font-size: 26px;
+  color: #ccdb38;
+}
+#newsletter input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+#newsletter ::-webkit-input-placeholder, #newsletter ::-moz-placeholder {
+  color: #ccdb38;
+}
+#ou {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6%;
+  padding: 2% 6%;
+}
+@media screen and (max-width: 950px) {
+  #ou {
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+}
+#ou iframe {
+  width: 800px;
+  height: 600px;
+  border: none;
+}
+@media screen and (max-width: 950px) {
+  #ou iframe {
+    width: 80vw;
+    height: 60vw;
+    margin-top: 1em;
+  }
+}
+#ou div {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 0 6em;
+}
+@media screen and (max-width: 1200px) {
+  #ou div {
+    padding: 0 1em 0 0;
+  }
+}
+#ou div h2 {
+  width: auto;
+  margin: 0;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 30px;
+  color: #ffb500;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+#ou div span.first {
+  display: inline-block;
+  animation: fadeinleft 2s;
+  -webkit-animation: fadeinleft 2s;
+  animation: fadeinleft 2s;
+}
+#ou div span.second {
+  opacity: 0;
+  animation: fadeinleft 2s ease-out 1s forwards;
+  -webkit-animation: fadeinleft 2s ease-out 1s forwards;
+}
+#ou div h3 {
+  margin: 0.4em 0;
+  font-size: 26px;
+  color: #8a6d62;
+}
+#ou div h4 {
+  margin-top: 0;
+}
+#ou div a {
+  margin-top: 1em;
+  color: #ccdb38;
+  align-self: center;
+  padding: 1em;
+  border: 4px solid #ccdb38;
+  text-decoration: none;
+}
+#ou div p {
+  margin: 0;
+}
+#ou div .space {
+  margin-top: 0.8em;
+}
+footer {
+  width: 100%;
+  padding: 3em 0;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #ccdb38;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 950px) {
+  footer {
+    padding-bottom: 0;
+  }
+}
+footer div.inner {
+  width: 92%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1em;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+@media screen and (max-width: 950px) {
+  footer div.inner {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+footer div.inner nav {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 950px) {
+  footer div.inner nav {
+    width: 100%;
+    flex-flow: column;
+  }
+}
+footer div.inner nav div {
+  min-width: 35%;
+  margin-left: 15%;
+  line-height: 160%;
+}
+footer div.inner nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+footer div.inner .logos {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: #fff;
+}
+@media screen and (max-width: 950px) {
+  footer div.inner .logos {
+    width: 80%;
+    flex-flow: row wrap;
+  }
+}
+footer div.inner .logos * {
+  margin: 0.1em;
+  text-decoration: none;
+  color: #fff;
+}
+footer div.inner div.logos a {
+  opacity: 0.5;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+footer div.inner div.logos a:hover {
+  opacity: 1;
+  transition: all 2s ease-out;
+  -webkit-transition: all 2s ease-out;
+}
+footer div.credits {
+  position: absolute;
+  width: 92%;
+  top: calc(100% - 24px);
+  left: 4%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 950px) {
+  footer div.credits {
+    position: static;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 1em;
+  }
+}
+#disclaimer {
+  display: flex;
+  flex-flow: column;
+  width: 75%;
+  margin: 1em auto;
+  font-size: 14px;
+}
+div.wrapper {
+  min-height: 100vh;
+  margin-bottom: 6%;
+  width: calc(100% - 112px);
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 950px) {
+  div.wrapper {
+    width: 100%;
+  }
+}
+div.wrapper > * {
+  margin-bottom: 64px;
+}
+div.cabanes header, div.venir header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb500;
+  color: #fff;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 32px 0;
+}
+@media screen and (max-width: 950px) {
+  div.cabanes header, div.venir header {
+    font-size: 30px;
+    padding: 16px 0;
+  }
+}
+div.cabanes header h1, div.venir header h1 {
+  font-size: 40px;
+  padding: 0.4em 2em;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+@media screen and (max-width: 950px) {
+  div.cabanes header h1, div.venir header h1 {
+    padding: 0.4em 1em;
+    font-size: 30px;
+  }
+}
+div.cabanes section {
+  width: 100%;
+  position: relative;
+}
+div.cabanes section > img {
+  width: 100%;
+  min-height: 350px;
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section > img {
+    min-height: 180px;
+  }
+}
+div.cabanes section div.left {
+  left: 3em;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.left {
+    left: 0.5em;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.left {
+    left: 0;
+  }
+}
+div.cabanes section div.right {
+  right: 3em;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.right {
+    right: 0.5em;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.right {
+    right: 0;
+  }
+}
+div.cabanes section div.desc {
+  position: absolute;
+  top: 3em;
+  width: 600px;
+  height: calc(100% - 6em);
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 1em;
+  background: linear-gradient(rgba(138, 109, 98, 0.7), rgba(138, 109, 98, 0.7));
+  -webkit-background: linear-gradient(rgba(138, 109, 98, 0.7), rgba(138, 109, 98, 0.7));
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc {
+    top: 0.5em;
+    width: 400px;
+    height: calc(100% - 1em);
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.desc {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+}
+div.cabanes section div.desc div.prix {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc div.prix {
+    height: 50px;
+    width: 70px;
+    top: 0.5em;
+    right: 0.5em;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.desc div.prix {
+    position: static;
+    height: 70px;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc div.prix span {
+    font-size: 10px;
+  }
+}
+div.cabanes section div.desc div.prix span:first-child {
+  font-size: 30px;
+  font-family: "AdventPro-Bold", sans-serif;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc div.prix span:first-child {
+    font-size: 16px;
+  }
+}
+div.cabanes section div.desc h1 {
+  font-size: 40px;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #ccdb38;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc h1 {
+    font-size: 24px;
+    margin: 0.3em 0;
+  }
+}
+div.cabanes section div.desc h2.cab {
+  font-size: 40px;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #ccdb38;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc h2.cab {
+    font-size: 24px;
+    margin: 0.3em 0;
+  }
+}
+div.cabanes section div.desc p {
+  margin: 0.5em;
+  color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc p {
+    margin: 0.2em;
+  }
+}
+div.cabanes section div.desc div.icons {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding-top: 16px;
+  color: #ccdb38;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc div.icons {
+    padding-top: 8px;
+  }
+}
+div.cabanes section div.desc div.icons > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+div.cabanes section div.desc span.icon-desc {
+  margin-top: 0.5em;
+  color: #fff;
+  font-weight: 600;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc span.icon-desc {
+    margin-top: 0.1em;
+  }
+}
+div.cabanes section div.desc .icon {
+  margin-top: 8px;
+  font-size: 60px;
+  line-height: 60px;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc .icon {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+div.cabanes section div.desc img {
+  margin-top: 8px;
+  height: 60px;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc img {
+    height: 40px;
+  }
+}
+div.cabanes section div.desc div.links {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.desc div.links {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.cabanes section div.desc div.links a {
+  width: 40%;
+  text-align: center;
+  color: #fff;
+  background-color: #ccdb38;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  div.cabanes section div.desc div.links a {
+    font-size: 20px;
+    padding: 0.5em 0.2em;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.desc div.links a {
+    width: 80%;
+  }
+}
+div.cabanes section div.desc div.links a:first-child {
+  margin-right: 2em;
+  color: #ccdb38;
+  background-color: #fff;
+}
+@media screen and (max-width: 950px) {
+  div.cabanes section div.desc div.links a:first-child {
+    margin: 1em 0 1em 0;
+  }
+}
+div.cabanes section div.desc div.links a:first-child:hover {
+  color: #b7ca00;
+  background-color: #fff;
+}
+div.cabanes section div.desc div.links a:hover {
+  color: #fff;
+  background-color: #b7ca00;
+}
+div.cabane header {
+  position: relative;
+}
+div.cabane header img {
+  width: 100%;
+}
+@media screen and (max-width: 950px) {
+  div.cabane header img {
+    min-height: 180px;
+  }
+}
+div.cabane section {
+  position: relative;
+}
+div.cabane section h1, div.cabane section h2, div.cabane section h3, div.cabane section .icon, div.cabane section .fa {
+  color: #ffb500;
+}
+div.cabane section p {
+  margin: 0 0 1em 0;
+}
+div.cabane section h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 60px;
+  margin: 0 0 32px;
+}
+div.cabane section .euro {
+  font-family: "HelveticaNeueLTStd-fin", sans-serif;
+}
+div.cabane section aside {
+  position: absolute;
+  width: 500px;
+  right: 16px;
+}
+@media screen and (max-width: 1200px) {
+  div.cabane section aside {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabane section aside {
+    position: static;
+    width: 100%;
+  }
+}
+div.cabane section aside > p:first-child {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  padding-left: 16px;
+  background-color: rgba(76, 76, 76, 0.7);
+  font-size: 30px;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #fff;
+}
+div.cabane section aside > div {
+  top: -30px;
+  padding: 16px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+div.cabane section aside.resa {
+  top: -114px;
+  transition: top 0.2s ease-out;
+  -webkit-transition: top 0.2s ease-out;
+}
+div.cabane section aside.resa #Datepickk .d-table input + label.today text:before {
+  display: none;
+}
+@media (max-height: 540px) {
+  div.cabane section aside.resa #Datepickk .d-week {
+    display: flex;
+  }
+}
+div.cabane section > div {
+  padding: 16px;
+}
+div.cabane section div.desc, div.cabane section div.menus {
+  width: calc(100% - 516px);
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (max-width: 1200px) {
+  div.cabane section div.desc, div.cabane section div.menus {
+    width: calc(100% - 316px);
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabane section div.desc, div.cabane section div.menus {
+    width: 100%;
+  }
+}
+div.cabane section div.desc .onglets, div.cabane section div.menus .onglets {
+  display: flex;
+  justify-content: space-around;
+  font-size: 26px;
+  line-height: 26px;
+}
+@media screen and (max-width: 950px) {
+  div.cabane section div.desc .onglets, div.cabane section div.menus .onglets {
+    flex-flow: column;
+    align-items: center;
+  }
+  div.cabane section div.desc .onglets .icon, div.cabane section div.menus .onglets .icon, div.cabane section div.desc .onglets .fa, div.cabane section div.menus .onglets .fa {
+    margin: 8px;
+  }
+}
+div.cabane section div.desc .onglets a, div.cabane section div.menus .onglets a {
+  text-decoration: none;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 26px;
+  color: #4c4c4c;
+}
+div.cabane section div.desc .icons, div.cabane section div.menus .icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 3em 10%;
+  border-top: 1px solid #ccdb38;
+  border-bottom: 1px solid #ccdb38;
+}
+div.cabane section div.desc .icons .icon, div.cabane section div.menus .icons .icon, div.cabane section div.desc .icons .fa, div.cabane section div.menus .icons .fa {
+  font-size: 60px;
+  color: #ccdb38;
+}
+div.cabane section div.desc .icons > div, div.cabane section div.menus .icons > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 16px;
+}
+div.cabane section div.desc span.warn, div.cabane section div.menus span.warn {
+  text-align: center;
+  color: red;
+}
+div.cabane section div.desc div.warn, div.cabane section div.menus div.warn {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid #ffb500;
+  padding: 1em;
+  margin: 1em 0;
+}
+div.cabane section div.desc div.note, div.cabane section div.menus div.note {
+  display: flex;
+}
+div.cabane section div.desc div.note div, div.cabane section div.menus div.note div {
+  display: flex;
+  flex-flow: column;
+}
+div.cabane section div.desc div.note div:last-child, div.cabane section div.menus div.note div:last-child {
+  flex: 1;
+  margin-left: 2em;
+}
+div.cabane section div.desc div.list, div.cabane section div.menus div.list {
+  display: flex;
+  flex-flow: column;
+}
+div.cabane section div.desc table.tarifs, div.cabane section div.menus table.tarifs {
+  margin: 2em;
+  width: calc(100% - 4em);
+  border-spacing: 0;
+}
+@media screen and (max-width: 950px) {
+  div.cabane section div.desc table.tarifs, div.cabane section div.menus table.tarifs {
+    margin: 2em 0;
+    width: 100%;
+  }
+}
+div.cabane section div.desc table.tarifs th, div.cabane section div.menus table.tarifs th, div.cabane section div.desc table.tarifs td, div.cabane section div.menus table.tarifs td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.4em;
+  height: 3em;
+}
+div.cabane section div.desc table.tarifs th h4, div.cabane section div.menus table.tarifs th h4, div.cabane section div.desc table.tarifs td h4, div.cabane section div.menus table.tarifs td h4 {
+  margin: 0;
+  font-family: "AdventPro-Bold", sans-serif;
+}
+@media screen and (min-width: 950px) {
+  div.cabane section div.desc table.tarifs .mobile, div.cabane section div.menus table.tarifs .mobile {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  div.cabane section div.desc table.tarifs .mobile > *, div.cabane section div.menus table.tarifs .mobile > * {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.cabane section div.desc table.tarifs .desktop, div.cabane section div.menus table.tarifs .desktop {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  div.cabane section div.desc table.tarifs .desktop > *, div.cabane section div.menus table.tarifs .desktop > * {
+    display: none;
+  }
+}
+div.cabane section div.desc table.tarifs .green, div.cabane section div.menus table.tarifs .green {
+  background-color: #ccdb38;
+}
+div.cabane section div.desc table.tarifs .grey, div.cabane section div.menus table.tarifs .grey {
+  background-color: rgba(76, 76, 76, 0.4);
+}
+div.cabane section div.desc table.tarifs .yellow, div.cabane section div.menus table.tarifs .yellow {
+  background-color: #ffb500;
+}
+div.cabane section div.desc table.tarifs .red, div.cabane section div.menus table.tarifs .red {
+  background-color: #b1c300;
+}
+div.cabane section div.desc .subtitle, div.cabane section div.menus .subtitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+div.cabane section div.desc h3, div.cabane section div.menus h3 {
+  color: #ccdb38;
+}
+div.cabane section div.menus h2 {
+  font-size: 26px;
+  color: #ccdb38;
+  font-family: "AdventPro-Bold", sans-serif;
+  text-transform: uppercase;
+}
+div.cabane section div.menus div.menu_gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  font-family: "AdventPro-Bold", sans-serif;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 950px) {
+  div.cabane section div.menus div.menu_gallery {
+    justify-content: center;
+  }
+}
+div.cabane section div.menus div.menu_gallery > * {
+  width: 250px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 1% 1% 1% 0;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+div.cabane section div.menus div.menu_gallery > * span {
+  text-align: center;
+}
+div.cabane section div.menus div.menu_gallery img {
+  width: 250px;
+  height: 250px;
+}
+div.cabane section div.menus div.text {
+  display: flex;
+  flex-flow: column;
+}
+div.cabane div.resa {
+  font-size: 20px;
+}
+div.cabane div.resa > * {
+  margin-bottom: 1em;
+}
+div.cabane div.resa > div {
+  display: flex;
+  flex-flow: column;
+}
+div.cabane div.resa > div > span {
+  display: flex;
+  font-family: "AdventPro-Bold", sans-serif;
+}
+div.cabane div.resa > div > span .sub {
+  margin-left: auto;
+  font-size: 16px;
+  font-family: "Quicksand-Regular", Helvetica, sans-serif;
+}
+div.cabane div.resa > div select, div.cabane div.resa > div input {
+  border: 1px solid rgba(76, 76, 76, 0.2);
+}
+div.cabane div.resa > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccdb38;
+  color: #fff;
+  padding: 16px;
+  font-size: 26px;
+  font-family: "AdventPro-Bold", sans-serif;
+  text-decoration: none;
+}
+div.cabane div.resa > a span {
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+div.cabane div.resa .last {
+  margin-bottom: 0;
+}
+div.cabane div.resa > a:hover {
+  background-color: #b7ca00;
+  color: #fff;
+}
+div.cabane section.menus aside h4 {
+  color: #ffb500;
+  margin: 0;
+}
+div.cabane section.menus aside span {
+  margin-bottom: 1em;
+  display: block;
+}
+div.venir section {
+  display: flex;
+  flex-flow: column;
+  padding: 0 1em 0 1em;
+}
+div.venir section h2 {
+  color: #ccdb38;
+  font-size: 30px;
+  margin-top: 0;
+}
+div.venir section h3 {
+  color: #ffb500;
+  font-size: 20px;
+  margin: 16px 0;
+}
+div.venir section h4 {
+  font-family: "Quicksand-Bold.otf", sans-serif;
+  margin: 1em 0 0 0;
+}
+div.venir section p {
+  margin: 0.5em 0;
+}
+div.venir section div {
+  display: flex;
+  flex-flow: column;
+}
+div.venir section div p a {
+  text-decoration: none;
+  color: #ccdb38;
+}
+div.venir section div p a:hover {
+  text-decoration: none;
+  color: #b7ca00;
+}
+div.venir section .anchor {
+  position: relative;
+  width: 50%;
+}
+@media screen and (max-width: 950px) {
+  div.venir section .anchor {
+    width: 100%;
+  }
+}
+div.venir section iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+@media screen and (max-width: 950px) {
+  div.venir section iframe {
+    position: static;
+  }
+}
+div.venir section > div > div {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 950px) {
+  div.venir section > div > div {
+    margin-left: 0;
+  }
+}
+div.venir section div.list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 950px) {
+  div.venir section div.list {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+}
+div.venir section div.list > * {
+  width: 20%;
+}
+@media screen and (max-width: 950px) {
+  div.venir section div.list > * {
+    width: auto;
+  }
+}
+div.venir section div.list h3 {
+  color: #8a6d62;
+  font-size: 16px;
+}
+div.reserv header {
+  position: relative;
+  margin-bottom: 0;
+}
+div.reserv header img {
+  width: 100%;
+}
+div.reserv header div {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+div.reserv header div h1 {
+  font-size: 46px;
+  color: #fff;
+  font-family: "AdventPro-Bold", sans-serif;
+  text-transform: uppercase;
+  margin-right: 32px;
+  text-align: right;
+}
+@media screen and (max-width: 950px) {
+  div.reserv header div h1 {
+    margin: 16px 16px;
+    font-size: 40px;
+  }
+}
+div.reserv section h2 {
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #ccdb38;
+}
+div.reserv section h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #ccdb38;
+}
+div.reserv section .top {
+  margin: 32px 0 0 0;
+}
+div.reserv section .bottom {
+  margin: 0 0 32px 0;
+}
+@media screen and (max-width: 950px) {
+  div.reserv section .bottom {
+    margin: 0;
+  }
+}
+div.reserv section p {
+  margin: 0.5em 0 0.5em 0;
+}
+div.reserv section div.resume {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+@media screen and (max-width: 950px) {
+  div.reserv section div.resume {
+    width: 100%;
+    flex-flow: column;
+  }
+}
+div.reserv section div.resume > div {
+  flex: 1;
+  margin: 0 10%;
+}
+@media screen and (max-width: 950px) {
+  div.reserv section div.resume > div {
+    margin: 0 8px;
+  }
+}
+div.reserv section div.resume > div > div {
+  margin: 48px 0 0 0;
+}
+@media screen and (max-width: 950px) {
+  div.reserv section div.resume > div > div {
+    margin: 32px 0 0 0;
+  }
+}
+div.reserv section div.resume > div > div .title {
+  font-size: 20px;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-weight: 700;
+}
+div.reserv section div.resume > div > div .yellow {
+  color: #ffb500;
+  font-weight: 700;
+}
+div.reserv section div.resume > div > div input {
+  height: 16px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+div.reserv section div.resume > div > div > div {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding-right: 16px;
+}
+@media screen and (max-width: 950px) {
+  div.reserv section div.resume > div > div > div {
+    width: 100%;
+  }
+}
+div.reserv section div.resume > div > div button {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  width: 24px;
+  height: 32px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+div.reserv section div.resume > div > div .total {
+  margin-top: 8px;
+  border-top: 1px solid black;
+  line-height: 32px;
+  font-family: "Quicksand-Bold.otf", sans-serif;
+  font-weight: 700;
+}
+div.reserv section div.resume > div .inputs > div {
+  line-height: 32px;
+  margin-top: 8px;
+}
+div.reserv section div.resume > div .inputs > div select, div.reserv section div.resume > div .inputs > div input {
+  font-size: 16px;
+  font-family: "Quicksand-Regular", Helvetica, sans-serif;
+  height: 32px;
+  margin: 0;
+}
+div.reserv section div.resume > div .inputs > div input {
+  width: 50px;
+}
+div.reserv section aside.resume {
+  width: 500px;
+  margin-right: 16px;
+}
+@media screen and (max-width: 1200px) {
+  div.reserv section aside.resume {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 950px) {
+  div.reserv section aside.resume {
+    width: 100%;
+  }
+}
+div.reserv section aside.resume > * {
+  width: 100%;
+}
+div.reserv section aside.resume > div {
+  padding: 16px;
+}
+div.reserv section aside.resume > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+div.reserv section aside.resume > div > div > span:first-child {
+  font-weight: 900;
+  font-family: "AdventPro-Bold", sans-serif;
+}
+div.reserv section aside.resume > div > div span {
+  line-height: 20px;
+}
+div.reserv section aside.resume > div > div input {
+  flex: 1;
+  margin-right: 16px;
+  line-height: 32px;
+  height: 48px;
+}
+div.reserv section aside.resume > div > div button {
+  display: inline-block;
+  width: 64px;
+  height: 48px;
+  background-color: #656565;
+  border: none;
+  color: #fff;
+  font-family: "AdventPro-Bold", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+div.reserv section aside.resume > div > div button:hover {
+  border: 1px solid black;
+}
+div.reserv section aside.resume > div .total {
+  margin-top: 8px;
+  border-top: 1px solid black;
+}
+div.reserv section aside.resume > div .total span {
+  line-height: 32px;
+  font-family: "Quicksand-Bold.otf", sans-serif;
+  font-weight: 700;
+}
+div.reserv section aside.resume h3 {
+  font-size: 36px;
+  font-family: "AdventPro-Bold", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ccdb38;
+  text-align: center;
+  line-height: 64px;
+}
+div.reserv section aside.resume h3 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+div.reserv section aside.resume h3:hover {
+  font-size: 36px;
+  font-family: "AdventPro-Bold", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #b7ca00;
+  text-align: center;
+  line-height: 64px;
+}
+div.reserv section aside.resume .desc {
+  display: block;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: "AdventPro-Bold", sans-serif;
+  color: #fff;
+  background-color: #656565;
+  text-align: center;
+  line-height: 64px;
+}
+@media screen and (max-width: 1200px) {
+  div.reserv section aside.resume .desc {
+    font-size: 24px;
+  }
+}
