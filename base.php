@@ -41,16 +41,16 @@ function open_page($page, $num_page) {
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item<?php if ($num_page == 1) { echo " active"; } ?>">
-                    <a class="nav-link" href="index.php">A propos</a>
+                    <a class="nav-link" href="/">A propos</a>
                 </li>
                 <li class="nav-item<?php if ($num_page == 2) { echo " active"; } ?>">
-                    <a class="nav-link" href="portfolio.php">Portfolio</a>
+                    <a class="nav-link" href="/portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item<?php if ($num_page == 3) { echo " active"; } ?>">
-                    <a class="nav-link" href="cv.php">Cv</a>
+                    <a class="nav-link" href="/cv">Cv</a>
                 </li>
                 <li class="nav-item<?php if ($num_page == 4) { echo " active"; } ?>">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>        
             </ul>
             <div class="logos-container">
