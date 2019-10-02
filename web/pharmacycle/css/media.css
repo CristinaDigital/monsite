@@ -1,0 +1,33 @@
+/*
+Ce fichier contient les styles spécifiques au différents points de rupture d'affichage c-à-d que vous déterminer plus précisement l'affichage sur les différentes tailles d'écrans. Ce fichier correspond donc au media queries. Il va de paire avec la meta viewport d'éclarée dans le head de vos fichiers html.
+*/
+
+/* Ecrans larges ( de 1405px à plus ) */
+@media only screen and ( min-width: 1405px ) {
+    /* Le CSS vient ici */
+}
+
+/* Laptops and desktops ( de 1100 à 1405px ) */
+@media only screen and ( min-width: 1100px ) and ( max-width: 1405px) {
+    /* Le CSS vient ici */
+}
+
+/* Tablettes en mode paysage ( de 981 à 1100px ) */
+@media only screen and ( min-width: 981px ) and ( max-width: 1100px ) {
+    /* Le CSS vient ici */
+}
+
+/* Tablettes en mode portrait ( de 768 à 980px ) */
+@media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
+    /* Le CSS vient ici */
+}
+
+/* Smartphones en mode paysage ( de 480 à 768px ) */
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
+    /* Le CSS vient ici */
+}
+
+/* Smartphones en mode portrait ( de 0 à 479px ) */
+@media only screen and ( max-width: 479px ) {
+    /* Le CSS vient ici */
+}

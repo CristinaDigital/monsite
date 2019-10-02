@@ -1,0 +1,543 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    Styles de balises
+*/
+/*
+    font-family: 'Poiret One', cursive;
+*/
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1em;
+}
+
+nav #logo {
+    display: block;
+    max-width: 24%;
+}
+
+nav #logo > img {
+    width: 100%;
+    height: 4em;
+}
+
+header {
+    height: 100vh;
+    background: url("../img/hp/presentation.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+header.repa {
+    background: url("../img/repa/repa 2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header > ul {
+    width: 85%;
+    height: 12%;
+    position: relative;
+    top: 75%;
+    margin: 0 auto;
+}
+
+header > ul > li {
+    float: left;
+    margin: 0 2%;
+    width: 29.33%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(161, 74, 112,0.5);
+}
+
+header > ul > li > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+header p {
+    width: 90%;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    color : white;
+    font-size: 1em;
+    text-decoration: 600;
+    line-height: 1.5em;
+    margin: 0 5%;
+}
+
+header p.title {
+    font-size: 1.5em;
+    text-decoration: 600;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+header i.fa {
+    position: relative;
+    top: 78%;
+    font-size: 5em;
+    color: white;
+}
+
+section {
+    width: 100%;
+    min-height: 100px;
+}
+
+ul > li {
+    display: inline-block;
+}
+
+section > ul > li {
+    display: block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ul > li > a {
+    color: white;
+    font-size: 1.2em;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+/*
+    Classes
+*/
+.barre_haute {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background : rgba(5, 5, 5, .4);
+}
+
+.barre_haute {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.barre_haute ul {
+    display: block;
+    height: 100%;
+    width: 80%;
+}
+
+.barre_haute li {
+    display: inline-block;
+    height: 100%;
+    line-height: 4em;
+    margin-right: 5em;
+    text-shadow: .2em .2em .2em black;
+}
+
+.barre_droite {
+    width: 20%;
+    height: 55%;
+    text-align: right;
+    position: fixed;
+    left: 80%;
+}
+
+.barre_droite > ul {
+    height: 20%;
+}
+
+.barre_droite li {
+    display: block;
+    margin: auto;
+}
+
+.barre_droite a {
+    height: 100%;
+    display: block;
+    padding-bottom: 1em;
+}
+
+.barre_droite img {
+    width: 3em;
+}
+
+.barre_droite a > span {
+    line-height: 3em;
+    font-size: 1em;
+    font-weight: 700;
+    margin-right: 0.6em;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: 0 0 3px #111;
+}
+
+/*
+    SECTION TYPES
+*/
+.types ul {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.types li {
+    display: block;
+    margin: 10px;
+    width: 310px;
+    height: 302px;
+}
+
+.types .box {
+    text-align: center;
+}
+
+.types .box > span {
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 302px;
+}
+
+.types .textbox > p {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.types .rando {
+    background: url("../img/hp/route.png");
+}
+
+.types .rando_text {
+    background-color: #FFD23D;
+}
+
+.types .city {
+    background: url("../img/hp/ville.png") no-repeat;
+}
+
+.types .city_text {
+    background-color: #77C6EF;
+}
+
+.types .child {
+    background: url("../img/hp/enfant.png");
+}
+
+.types .child_text {
+    background-color: #916EA4;
+}
+
+.types .vtt {
+    background: url("../img/hp/vtt.png");
+}
+
+.types .vtt_text {
+    background-color: #EF7785;
+}
+
+/* SECTION REPAS */
+
+
+.button_dev {
+    -moz-box-shadow: 0px 10px 14px -7px #c63e55;
+    -webkit-box-shadow: 0px 10px 14px -7px #c63e55;
+    box-shadow: 0px 10px 14px -7px #c63e55;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c63e55), color-stop(1, #731b29));
+    background:-moz-linear-gradient(top, #c63e55 5%, #731b29 100%);
+    background:-webkit-linear-gradient(top, #c63e55 5%, #731b29 100%);
+    background:-o-linear-gradient(top, #c63e55 5%, #731b29 100%);
+    background:-ms-linear-gradient(top, #c63e55 5%, #731b29 100%);
+    background:linear-gradient(to bottom, #c63e55 5%, #731b29 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c63e55', endColorstr='#731b29',GradientType=0);
+    background-color:#c63e55;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+    padding:4% 4%;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #850016;
+}
+.button_dev:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #731b29), color-stop(1, #c63e55));
+    background:-moz-linear-gradient(top, #731b29 5%, #c63e55 100%);
+    background:-webkit-linear-gradient(top, #731b29 5%, #c63e55 100%);
+    background:-o-linear-gradient(top, #731b29 5%, #c63e55 100%);
+    background:-ms-linear-gradient(top, #731b29 5%, #c63e55 100%);
+    background:linear-gradient(to bottom, #731b29 5%, #c63e55 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#731b29', endColorstr='#c63e55',GradientType=0);
+    background-color:#731b29;
+}
+.button_dev:active {
+    position:relative;
+    top:1px;
+}
+
+
+/*
+    SECTION PRES
+*/
+.pres li {
+    width: 55%;
+}
+
+.pres .caption {
+    margin: 3%;
+    width: 37%;
+    padding: 1%;
+    text-align: justify;
+    font-family: 'Rajdhani', sans-serif;
+    color : white;
+    font-size: 1.2em;
+    text-decoration: 600;
+    line-height: 1.5em;
+}
+
+.pres li > img {
+    width: 65%;
+}
+
+/*
+    SECTION PROMO
+*/
+.promo > ul {
+    text-align: center;
+    margin: 0 8%;
+}
+
+.promo > ul > li {
+    max-width: 33%;
+}
+
+/*
+    SECTION MAP
+*/
+
+.map img {
+    width: 55%;
+}
+
+/* SECTION ANCRES REPA */
+
+.anc_rep img {
+    width: 80%;
+}
+
+.mini img {
+    width: 55%;
+}
+
+.big img {
+    width: 90%;
+}
+
+/*
+    FOOTER
+*/
+
+.footer {
+    background-color: #c63e54;
+    text-align: center;
+    margin-top: 0.8%;
+}
+
+.footer .icons a > img {
+    line-height: em;
+    margin: 0.8em 0.5em 0 0.5em;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-size: 1.4em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.footer > ul > li {
+    text-align: left;
+    margin: 0 1%;
+}
+
+/*
+    SECTION TARIF
+*/
+.tarif ul {
+    margin: 0 5%;
+    width:35%;
+}
+
+.tarif ul > li {
+    display: block;
+    text-align: center;
+}
+
+.tarif ul > li > img {
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.tarif ul > li > p {
+    text-align: left;
+}
+
+.tarif div > img {
+    width: 50%;
+    margin-top: 2em;
+}
+
+/* 
+    TOOLS
+*/
+.bigletter::first-letter {
+    font-size: 200%;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.redbox {
+    background-color: #c63e54;
+    display: block;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.address {
+    font-family: 'poiret One', sans-serif;
+    color : white;
+    font-size: 1.2em;
+    text-decoration: 600;
+    line-height: 1.5em;
+}
+
+.adress_titre {
+    font-size: 1.4em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.titre {
+    font-size: 2.5em;
+    color: white;
+    text-decoration: 900;
+    background-color: #c63e54;
+    text-align: center;
+    height: 90px;
+    line-height: 90px;
+    margin-top: 0.8%;
+    text-transform: uppercase;
+}
+
+.descrip {
+    display: inline;
+    text-align: center;
+}
+
+.rep {
+    width: 85%;
+    height: 40%;
+    position: relative;
+    top: 75%;
+    margin: 0 auto;
+}
+
+.fa {
+    color: #c63e54;
+}
+
+.arrow {
+    max-width: 4%;
+}
+
+
+.little {
+    height: .5em;
+}
+
+.container {
+    max-width: 1600px;
+    vertical-align: middle;
+    margin : 0 auto;
+    padding: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.floater { /* Pour centrer */
+    float: right;
+    height: 40%;
+    width: 100%;
+}
+
+.down {
+    padding-top: 38.97%;
+}
