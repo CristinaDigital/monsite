@@ -20,7 +20,9 @@
 	    	<address>
 	    		<a href="mailto:#">christina.asensio@gmail.com</a>
 	    	</address>
-	       <a href="cv-cristina_asensio.pdf" class="btn" target="_blank"><button type="button" class="btn-primary btn-lg">Téléchargez mon cv</button></a>
+	       <a href="cv-cristina_asensio.pdf" class="btn" target="_blank">
+		       	<button type="button" class="btn-primary btn-lg">Téléchargez mon cv</button>
+	       </a>
 	   	</div>
 	    <div class="group">
 		    <div class="inte">
@@ -50,7 +52,7 @@
 				<p>Méthodologie de projet, accessibilité.</p>
 				<p>Développement.</p>
 				<h4>Langages Informatiques</h4>
-				<div id="pictos">
+				<div class="pictos">
 					<div>
 						<div class="group1">
 							<p><img src="../img/html.svg" title="Picto Html5" alt="Responsive image">
@@ -95,7 +97,7 @@
 				<p>Mise aux normes des différents éléments.</p>
 				<p>Régles typographiques.</p>
 				<h4>Logiciels utilisés</h4>
-				<div id="pictos">
+				<div class="pictos">
 					<div>
 						<div class="group3">
 							<p><img src="../img/ps.svg" title="Picto Photoshop" alt="Responsive image">
@@ -114,7 +116,7 @@
 					<img src="../img/es.svg" title="Picto drapeau espagnol" alt="Responsive image">
 					<p>Langue Maternelle</p>
 					<img src="../img/fr.svg" title="Picto drapeau français" alt="Responsive image">
-					<p>&Eacute;crit &amp; parlé</p>
+					<p>Bilingue</p>
 					<img src="../img/en.svg" title="Picto drapeau anglais" alt="Responsive image">
 					<p>Notions</p>
 				</div>
@@ -140,9 +142,8 @@
 				(Action et Communication Administrative)</p>
 				<h3>Hobbies</h3>
 				<p>Dessin, Nature &amp; Balades, Photographie, Jeux vidéos &amp; Gaming</p>
-			</div>
-		</div>		
-	</div>
+		</div>
+	</div>		
 </section>
 
 <?php

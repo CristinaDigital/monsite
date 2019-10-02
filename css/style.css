@@ -41,7 +41,18 @@ body {
   font-size: 16px;
   color: #b4b4b7;
   background: linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
+  background: -webkit-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
+  background: -moz-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
+  background: -o-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
   background-size: cover;
+}
+@media screen and (max-width: 1000px) {
+  body {
+    background: linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
+    background: -webkit-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
+    background: -moz-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
+    background: -o-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
+  }
 }
 .btn-navigation {
   position: absolute;
@@ -51,7 +62,7 @@ body {
   cursor: pointer;
   display: none;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   .btn-navigation {
     display: block;
   }
@@ -60,9 +71,11 @@ body {
   width: 30px;
   height: 3px;
   background: #df358d;
-  margin-top: 3px;
+  margin-top: 5px;
   transition: background 0.3s ease-in-out;
   -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
 }
 .btn-navigation .white {
   background: #f7fbfd;
@@ -78,50 +91,69 @@ nav.fluid-container > div {
   height: 100%;
   z-index: 1030;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   nav.fluid-container > div {
     width: 100%;
-    display: inline-table;
   }
 }
-@media screen and (max-width: 450px) {
+nav.fluid-container > div img {
+  max-width: 100%;
+}
+@media screen and (max-width: 1000px) {
   nav.fluid-container > div img {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   nav.fluid-container > div ul.nav {
     background: linear-gradient(#0a1129, #0a1129);
     transition: transform 0.6s ease-in-out;
-    -webkit-transition: transform 0.6s ease-in-out;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
   }
 }
 nav.fluid-container > div ul.nav.isopen {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -o-transform: translateX(0%);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   nav.fluid-container > div div.logos-container {
     background: linear-gradient(#0a1129, #0a1129);
-    transition: transform 0.6s ease-in-out, background 0.6s ease-in;
-    -webkit-transition: transform 0.6s ease-in-out, background 0.6s ease-in;
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
   }
 }
 nav.fluid-container > div div.logos-container.isopen {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -o-transform: translateX(0%);
 }
 nav.fluid-container > div div.logos {
   padding-top: 12rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   nav.fluid-container > div div.logos {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  nav.fluid-container > div div.logos {
+    padding-top: 6rem;
   }
 }
 nav.fluid-container > div div.logos a {
@@ -130,12 +162,16 @@ nav.fluid-container > div div.logos a {
   opacity: 0.2;
   transition: color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-out;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
 }
 nav.fluid-container > div div.logos a:hover {
   color: #e10073;
   opacity: 1;
   transition: color 2s ease-out;
   -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
 }
 nav.fluid-container > div ul, nav.fluid-container > div div {
   width: 100%;
@@ -156,6 +192,8 @@ nav.fluid-container > div li.active {
 }
 nav.fluid-container > div li {
   padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 nav.fluid-container > div li :hover {
   background: rgba(255, 255, 255, .02);
@@ -165,6 +203,12 @@ nav.fluid-container > div a.nav-link, nav.fluid-container > div a.nav-link.activ
 }
 nav.fluid-container > div a.nav-link {
   padding-left: 2rem;
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  nav.fluid-container > div a.nav-link {
+    padding-left: 1rem;
+    font-size: 1.8rem;
+  }
 }
 nav.fluid-container > div a.nav-link :hover {
   color: #df358d;
@@ -185,29 +229,42 @@ section.container-fluid {
 }
 section.container-fluid > div {
   margin-left: 15%;
-  padding-left: 3rem;
-  padding-right: 3rem;
   background: rgba(11, 16, 35, .6);
   min-height: calc(100vh - 50px);
+  padding: 1.5rem;
 }
-section.container-fluid > div h1 {
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div {
+    padding-right: 1.5rem;
+    padding-top: 12rem;
+    padding-left: 1.5rem;
+    margin: 0;
+  }
+}
+section.container-fluid > div h1, section.container-fluid > div h1 > span.prenom {
   color: #f7fbfd;
   font-family: 'AdventPro-Bold', sans-serif, Arial;
   font-size: 5rem;
-  margin-top: -4rem;
-  margin-bottom: -0.5rem;
+  line-height: 4rem;
+  margin: 1.6rem 0 1rem 0;
 }
-section.container-fluid > div h1 span.nom {
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div h1, section.container-fluid > div h1 > span.prenom {
+    margin-top: 2rem;
+    line-height: 4rem;
+  }
+}
+section.container-fluid > div h1 span.nom, section.container-fluid > div h1 > span.prenom span.nom {
+  color: #f7fbfd;
   font-family: 'HelveticaNeueLTStd-fin', sans-serif, Arial;
   font-size: 5rem;
-  margin-top: -0.33em;
-  margin-bottom: 1.6rem;
-  color: #f7fbfd;
 }
-section.container-fluid > div h1 span {
+section.container-fluid > div h1 span, section.container-fluid > div h1 > span.prenom span {
   font-family: 'AdventPro-Bold', sans-serif, Arial;
   color: #df358d;
   font-size: 12rem;
+  line-height: 0;
+  letter-spacing: 0;
 }
 section.container-fluid > div > h2 {
   display: inline-block;
@@ -217,6 +274,12 @@ section.container-fluid > div > h2 {
 section.container-fluid > div h2 {
   color: #f7fbfd;
   padding-top: 3rem;
+}
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 section.container-fluid > div hr {
   border-bottom: 0.3rem solid #df358d;
@@ -229,11 +292,22 @@ section.container-fluid > div h3 {
   color: #df358d;
   font-size: 2rem;
 }
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div h3 {
+    width: 100%;
+    margin-right: 11rem;
+  }
+}
 section.container-fluid > div p {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
   width: 43%;
   letter-spacing: 0.9px;
+}
+@media screen and (max-width: 1200px) {
+  section.container-fluid > div p {
+    width: 100%;
+  }
 }
 section.container-fluid > div p span.m-avant {
   color: #5287f1;
@@ -244,9 +318,18 @@ section.container-fluid > div .btn {
   margin-right: 55px;
   padding: 0;
 }
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div .btn {
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 1rem;
+  }
+}
 section.container-fluid > div .btn > button {
   width: 100%;
   padding: 1rem;
+  -moz-border-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
   cursor: pointer;
 }
@@ -282,16 +365,32 @@ section.container-fluid > div div span.fa.fa-quote-left {
   color: #354669;
   font-size: 5rem;
   padding-top: 1px;
-  width: 6%;
+  width: 4rem;
+}
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div div span.fa.fa-quote-left {
+    width: 10%;
+  }
 }
 section.container-fluid > div div .blockquote, section.container-fluid > div div .blockquote-footer {
   font-family: 'AdventPro-Bold', sans-serif, Arial;
   width: 80%;
-  padding-right: 330px;
 }
 section.container-fluid > div div .blockquote-footer {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div div .blockquote-footer {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 1000px) {
+  section.container-fluid > div p.mb-0 {
+    width: 100%;
+    padding-left: 1.6rem;
+  }
 }
 section.container-fluid > div div.input-group form {
   padding-top: 2rem;
@@ -326,55 +425,13 @@ section.container-fluid > div div.input-group form textarea#message, section.con
 section.container-fluid > div div.input-group form textarea#message input#prenom, section.container-fluid > div div.input-group form input input#prenom, section.container-fluid > div div.input-group form textarea#message input#email, section.container-fluid > div div.input-group form input input#email, section.container-fluid > div div.input-group form textarea#message input#compagnie, section.container-fluid > div div.input-group form input input#compagnie, section.container-fluid > div div.input-group form textarea#message input#position, section.container-fluid > div div.input-group form input input#position {
   width: 70%;
 }
-@media screen and (max-width: 450px) {
-  section.container-fluid > div {
-    display: inline-table;
-    padding-right: 1.5rem;
-    padding-top: 12rem;
-    padding-left: 1.5rem;
-    margin: 0;
-  }
-  section.container-fluid div p {
-    width: 90%;
-  }
-  section.container-fluid h1 {
-    font-size: 5rem;
-    margin-top: 2rem;
-  }
-  section.container-fluid h2 {
-    margin-bottom: 6rem;
-  }
-  section.container-fluid h3 {
-    width: 90%;
-    margin-right: 11rem;
-  }
-  section.container-fluid span.nom {
-    padding-top: 0.9rem;
-    display: flex;
-    margin-bottom: 1.6rem;
-    color: #f7fbfd;
-  }
-  section.container-fluid span {
-    display: contents;
-  }
-  section.container-fluid a.btn {
-    width: 85%;
-    display: flex;
-    padding-bottom: 1rem;
-  }
-}
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   section.container-fluid blockquote.blockquote.blockquote-reverse {
     padding-right: 0;
   }
-  section.container-fluid p.mb-0 {
-    width: 100%;
-    padding-right: 1.6rem;
-  }
-  section.container-fluid div.blockquote-footer {
-    width: 100%;
-    padding-right: 0 !important;
-  }
+}
+#contact > div {
+  width: 100%;
 }
 #contact .content {
   width: 100%;
@@ -384,17 +441,39 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   flex-direction: row;
   padding-top: 1.5rem;
 }
+@media screen and (max-width: 1000px) {
+  #contact .content {
+    flex-direction: column;
+  }
+}
 #contact .content div {
   display: flex;
   flex-direction: column;
-  padding-top: 1.5rem;
-  width: 100%;
-  padding-right: 3rem;
+  width: 42%;
+}
+@media screen and (max-width: 1000px) {
+  #contact .content div {
+    width: 100%;
+  }
+}
+#contact .content .text {
+  padding: 1.5rem 1.5rem 0 0;
+}
+@media screen and (max-width: 1000px) {
+  #contact .content .text {
+    padding-top: 0px;
+    padding-right: 0px;
+  }
 }
 #contact .content .text p {
   margin-top: 0;
   margin-bottom: 10;
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  #contact .content .text p {
+    width: 100% !important;
+  }
 }
 #contact .content .text > * {
   width: auto;
@@ -407,38 +486,25 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   color: #f7fbfd;
   padding-top: 1rem;
 }
+@media screen and (max-width: 1000px) {
+  #contact .content h2 {
+    margin-bottom: 2rem;
+  }
+}
 #contact .content p {
   letter-spacing: 0.9px;
 }
 #contact .content button {
   margin-top: 2rem;
 }
-@media screen and (max-width: 450px) {
-  #contact h2 {
-    margin-bottom: 0;
-  }
-  #contact div.text {
-    padding-top: 0px;
-    padding-right: 0px;
-  }
-  #contact div.text .text p {
-    width: 100% !important;
-  }
-  #contact div.content {
-    flex-direction: column;
-  }
-  #contact div.content div {
-    flex-direction: column;
-    padding-bottom: 1rem;
-  }
-  #contact div.content iframe {
-    width: 120%;
+@media screen and (max-width: 1000px) {
+  #contact iframe {
     height: 300px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   div h2.book {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 }
 #book {
@@ -446,35 +512,44 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   flex-flow: row wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 1000px) {
+  #book {
+    padding: 0;
+    flex-flow: column !important;
+  }
+}
 #book > div {
   width: 18%;
+}
+@media screen and (max-width: 1000px) {
+  #book > div {
+    padding: 0;
+    width: 100%;
+  }
 }
 #book a {
   text-decoration: none;
 }
 #book img {
   width: 100%;
-  max-height: 75%;
+  max-height: 80%;
 }
 #book figcaption {
   color: #f7fbfd;
   letter-spacing: 1.3px;
   padding-top: 0.5rem;
 }
-@media screen and (max-width: 450px) {
-  #book div#book {
-    padding: 0;
-    display: flex;
-    flex-flow: column !important;
-    justify-content: space-between;
-  }
-  #book div {
-    padding: 0;
+#cv {
+  letter-spacing: 0.9px;
+  width: 85%;
+}
+@media screen and (max-width: 1000px) {
+  #cv {
     width: 100%;
   }
 }
-#cv {
-  letter-spacing: 0.9px;
+#cv h2 {
+  margin-bottom: 2rem;
 }
 #cv div.group, #cv div.group3 {
   padding-top: 0;
@@ -482,14 +557,39 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   flex-flow: nowrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 1000px) {
+  #cv div.group, #cv div.group3 {
+    flex-direction: column;
+  }
+}
 #cv div.group div.design, #cv div.group3 div.design {
   align-items: right;
 }
-#cv div.me {
-  padding: 4rem 0 0 0;
+@media screen and (max-width: 1000px) {
+  #cv div.group div.design, #cv div.group3 div.design {
+    align-items: left !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #cv div.me h1 {
+    margin: 0;
+  }
 }
 #cv div.me .btn {
   width: 230px;
+}
+@media screen and (max-width: 1000px) {
+  #cv div.me .btn {
+    padding: 0;
+    margin: 0;
+    flex-shrink: 1;
+    width: auto;
+    align-self: start;
+  }
+}
+#cv div.me .btn a {
+  text-decoration: none;
+  color: #5287f1;
 }
 #cv div.me p {
   margin-top: 1rem;
@@ -498,10 +598,6 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
 }
 #cv div.me address {
   letter-spacing: 1px;
-}
-#cv div.me a {
-  text-decoration: none;
-  color: #5287f1;
 }
 #cv div {
   display: flex;
@@ -512,44 +608,107 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   font-size: 1.3rem;
   padding: 1rem 0 0 0;
 }
+@media screen and (max-width: 1000px) {
+  #cv div h4 {
+    width: 80%;
+  }
+}
 #cv div h5 {
   color: #f7fbfd;
   font-size: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  #cv div h5 {
+    padding-right: 2.5rem;
+  }
 }
 #cv p {
   width: 100%;
   margin: 0;
   padding: 0.5rem;
 }
-#cv div#pictos {
+@media screen and (max-width: 1000px) {
+  #cv p {
+    width: 100%;
+    padding-right: 1.9rem;
+  }
+}
+#cv div.pictos {
   display: flex;
   flex-direction: row;
 }
-#cv div#pictos div {
+#cv div.pictos div {
   padding-top: 0;
   width: 70%;
   flex-direction: column;
 }
-#cv div#pictos div .group1, #cv div#pictos div .group2, #cv div#pictos div .group3 {
+@media screen and (max-width: 1000px) {
+  #cv div.pictos div {
+    width: 90%;
+  }
+}
+#cv div.pictos div .group1, #cv div.pictos div .group2, #cv div.pictos div .group3 {
   flex-direction: row;
 }
-#cv div#pictos div .group1 p, #cv div#pictos div .group2 p, #cv div#pictos div .group3 p {
+@media screen and (max-width: 1000px) {
+  #cv div.pictos div .group1 div.group1, #cv div.pictos div .group2 div.group1, #cv div.pictos div .group3 div.group1 {
+    width: 112%;
+  }
+}
+#cv div.pictos div .group1 p, #cv div.pictos div .group2 p, #cv div.pictos div .group3 p {
   width: 100%;
 }
-#cv div#pictos div .group1 img, #cv div#pictos div .group2 img, #cv div#pictos div .group3 img {
+@media screen and (max-width: 1000px) {
+  #cv div.pictos div .group1 p, #cv div.pictos div .group2 p, #cv div.pictos div .group3 p {
+    width: 68px;
+  }
+}
+#cv div.pictos div .group1 img, #cv div.pictos div .group2 img, #cv div.pictos div .group3 img {
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  #cv div.pictos div .group1 img, #cv div.pictos div .group2 img, #cv div.pictos div .group3 img {
+    width: 55px;
+  }
 }
 #cv div.flags {
   width: 100%;
   display: flex;
   flex-direction: row;
-}
-#cv div.flags p {
-  display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  #cv div.flags {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #cv div.flags {
+    flex-direction: row wrap;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #cv div.flags p {
+    padding: 1em 0;
+    text-align: center;
+  }
 }
 #cv div.flags img {
   width: 100px;
+  height: 50px;
+  object-fit: cover;
+}
+@media screen and (max-width: 1000px) {
+  #cv div.flags img {
+    width: 200px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  #cv div.flags img {
+    width: 50px;
+    height: 25px;
+  }
 }
 #cv div.xp {
   padding-bottom: 1rem;
@@ -560,56 +719,9 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
 #cv div.xp h3 {
   padding-top: 2rem;
 }
-@media screen and (max-width: 450px) {
-  #cv div.me a.btn {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 450px) {
-  #cv div#pictos div {
-    width: 90%;
-  }
-  #cv div#pictos div .group1 p, #cv div#pictos div .group2 p, #cv div#pictos div .group3 p {
-    width: 68px;
-  }
-  #cv div#pictos div .group1 p img, #cv div#pictos div .group2 p img, #cv div#pictos div .group3 p img {
-    width: 55px;
-  }
-  #cv h2 {
-    margin-bottom: 2rem;
-  }
-  #cv div.inte h3, #cv div.design h3 {
+@media screen and (max-width: 1000px) {
+  #cv div.xp h3 {
     width: 100%;
-  }
-  #cv h4 {
-    width: 80%;
-  }
-  #cv h5 {
-    padding-right: 2.5rem;
-  }
-  #cv div.group {
-    display: flex;
-    flex-direction: column;
-  }
-  #cv div.group1 {
-    width: 112%;
-  }
-  #cv div.design {
-    align-items: left !important;
-  }
-  #cv p {
-    padding-right: 2.5rem;
-    width: 90%;
-  }
-  #cv div.flags {
-    flex-direction: column;
-    padding-left: 2rem;
-  }
-  #cv div.flags img {
-    width: 200px;
-  }
-  #cv div.flags p {
-    padding-left: 0;
   }
 }
 footer {
@@ -619,14 +731,14 @@ footer div.container-fluid {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1.5rem;
+  justify-content: flex-end;
 }
 footer div.container-fluid div.credits {
   letter-spacing: 1.2px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
 }
 footer div.container-fluid div.credits span.wow {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }

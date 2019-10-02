@@ -44,6 +44,7 @@ $font-euro: 'HelveticaNeueLTStd-fin', sans-serif, Arial, !default;
 $font-qbold: 'Quicksand-Bold.otf', sans-serif, Arial, !default;
 
 $color-bg-body: rgba(10, 17, 41, .7);
+$color-bg-body-small: rgba(10, 17, 41, .4);
 $color-nav: rgb(10, 17, 41);
 $color-txt: #b4b4b7;
 $color-grey: #d5ddf5;
@@ -75,9 +76,8 @@ $zindex-modal:             1050;
 $zindex-popover:           1060;
 $zindex-tooltip:           1070;
 
-$break-small: 450px;
-$break-large: 950px;
-$break-xl: 1200px;
+$break-small: 1000px;
+$break-large: 1200px;
 
 
 * {
@@ -94,7 +94,16 @@ body {
   color: $color-txt;
 
   background: linear-gradient($color-bg-body, $color-bg-body), url('../img/bg.jpg') no-repeat fixed;
+  background: -webkit-linear-gradient($color-bg-body, $color-bg-body), url('../img/bg.jpg') no-repeat fixed;
+  background: -moz-linear-gradient($color-bg-body, $color-bg-body), url('../img/bg.jpg') no-repeat fixed;
+  background: -o-linear-gradient($color-bg-body, $color-bg-body), url('../img/bg.jpg') no-repeat fixed;
   background-size: cover;
+  @media screen and (max-width: $break-small) {
+    background: linear-gradient($color-bg-body-small, $color-bg-body-small), url('../img/bg.jpg') no-repeat fixed;
+    background: -webkit-linear-gradient($color-bg-body-small, $color-bg-body-small), url('../img/bg.jpg') no-repeat fixed;
+    background: -moz-linear-gradient($color-bg-body-small, $color-bg-body-small), url('../img/bg.jpg') no-repeat fixed;
+    background: -o-linear-gradient($color-bg-body-small, $color-bg-body-small), url('../img/bg.jpg') no-repeat fixed;
+  }
 }
 
 .btn-navigation {
@@ -112,9 +121,12 @@ body {
     width: 30px;
     height: 3px;
     background: $color-pink;
-    margin-top: 3px;
+    margin-top: 5px;
     transition: background .3s ease-in-out;
     -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+  
   }
   .white {
     background: $color-white-broken;
@@ -133,9 +145,9 @@ nav.fluid-container {
     z-index: $zindex-fixed;
     @media screen and (max-width: $break-small) {
       width: 100%;
-      display: inline-table;
     }
     img {
+      max-width: 100%;
       @media screen and (max-width: $break-small) {
         margin: 0 auto;
       }
@@ -144,27 +156,40 @@ nav.fluid-container {
       @media screen and (max-width: $break-small) {
         background: linear-gradient($color-nav, $color-nav);
         transition: transform .6s ease-in-out;
-        -webkit-transition: transform .6s ease-in-out;
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        -moz-transition: -moz-transform .6s ease-in-out;
+        -o-transition: -o-transform .6s ease-in-out;
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
       }
     }
     ul.nav.isopen {
       transform: translateX(0%);
       -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -o-transform: translateX(0%);
     }
     div.logos-container {
       @media screen and (max-width: $break-small) {
         background: linear-gradient($color-nav, $color-nav);
-        transition: transform .6s ease-in-out, background .6s ease-in;
-        -webkit-transition: transform .6s ease-in-out, background .6s ease-in;
-        transform: translateX(100%);
-        -webkit-transform: translateX(100%);
+        transition: transform .6s ease-in-out;
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        -moz-transition: -moz-transform .6s ease-in-out;
+        -o-transition: -o-transform .6s ease-in-out;
+
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
       }
     }
     div.logos-container.isopen {
       transform: translateX(0%);
       -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -o-transform: translateX(0%);
     }
 
     div.logos {
@@ -173,18 +198,25 @@ nav.fluid-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
       }
+      @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        padding-top: 6rem;
+      }
       a {
         padding:  0 10px;
         color: $color-white-broken;
         opacity: .2;
         transition: color .1s ease-out;
         -webkit-transition: color .1s ease-out;
+        -moz-transition: color .1s ease-out;
+        -o-transition: color .1s ease-out;
       }
       a:hover {
         color: $color-pink-hover;
         opacity: 1;
         transition: color 2s ease-out;
         -webkit-transition: color 2s ease-out;
+        -moz-transition: color 2s ease-out;
+        -o-transition: color 2s ease-out;
       }
     }
 
@@ -208,6 +240,8 @@ nav.fluid-container {
     }
     li {
       padding-left: .5rem;
+      display: flex;
+      align-items: center;
       :hover {
         background: $color-li-hover;
       }
@@ -218,6 +252,11 @@ nav.fluid-container {
     }
     a.nav-link {
       padding-left: 2rem;
+      width: 100%;
+      @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        padding-left: 1rem;
+        font-size: 1.8rem;
+      }
       :hover {
         color: $color-pink;
       }
@@ -241,28 +280,37 @@ section.container-fluid {
 
   > div {
     margin-left: 15%;
-    padding-left: 3rem;
-    padding-right: 3rem;
     background: $color-container;
     min-height: calc(100vh - 50px);
+    padding: 1.5rem;
+    @media screen and (max-width: $break-small) {
+      padding-right: 1.5rem;
+      padding-top: 12rem;
+      padding-left: 1.5rem;
+      margin: 0;
+    }
 
-    h1 {
-      color: $color-white-broken;        
-      font-family: $font-advent; 
+    h1, h1 > span.prenom {
+      color: $color-white-broken;
+      font-family: $font-advent;
       font-size: 5rem;
-      margin-top: -4rem;
-      margin-bottom: -.5rem;
+      line-height: 4rem;
+      margin: 1.6rem 0 1rem 0;
+      @media screen and (max-width: $break-small) {
+        margin-top: 2rem;
+        line-height: 4rem;
+      }
       span.nom  {
+        color: $color-white-broken;
         font-family: $font-euro;
         font-size: 5rem;
-        margin-top: -.33em;
-        margin-bottom: 1.6rem;
-        color: $color-white-broken;
       }
       span {
         font-family: $font-advent;
         color: $color-pink;
         font-size: 12rem;
+        line-height: 0;
+        letter-spacing: 0;
       }
     }
     > h2 {
@@ -273,6 +321,10 @@ section.container-fluid {
     h2 {
       color: $color-white-broken;
       padding-top: 3rem;
+      @media screen and (max-width: $break-small) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
     }
     hr {
       border-bottom: .3rem solid $color-border-bot;
@@ -284,12 +336,19 @@ section.container-fluid {
       font-family: $font-euro;
       color: $color-pink;
       font-size: 2rem;
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-right: 11rem;
+      }
     }
     p {
       margin-top: 1rem;
       margin-bottom: 1.6rem;
       width: 43%;
       letter-spacing: .9px;
+      @media screen and (max-width: $break-large) {
+        width: 100%;
+      }
       span.m-avant {
         color: $color-mise-en-avant;
       }
@@ -299,10 +358,17 @@ section.container-fluid {
       margin-left: 2px;
       margin-right: 55px;
       padding: 0;
+      @media screen and (max-width: $break-small) {
+        margin: 0 auto;
+        display: flex;
+        padding-bottom: 1rem;
+      }
 
       > button {
         width: 100%;
         padding: 1rem;
+        -moz-border-border-radius: 0;
+        -webkit-border-radius: 0;
         border-radius: 0;
         cursor: pointer;
       }
@@ -338,17 +404,29 @@ section.container-fluid {
         color: $color-quote-blue;
         font-size: 5rem;
         padding-top: 1px;
-        width: 6%;
+        width: 4rem;
+        @media screen and (max-width: $break-small) {
+          width: 10%;
         }
+      }
       .blockquote,
       .blockquote-footer {
         font-family: $font-advent;
         width: 80%;
-        padding-right: 330px;
-        }
+      }
       .blockquote-footer {
         display: flex;
-        justify-content: end;
+        justify-content: center;
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          justify-content: flex-end;
+        }
+      }
+    }
+    @media screen and (max-width: $break-small) {
+      p.mb-0 {
+        width: 100%;
+        padding-left: 1.6rem;
       }
     }
     div.input-group form {
@@ -390,59 +468,18 @@ section.container-fluid {
       }
     }
   }
+
   @media screen and (max-width: $break-small) {
-    > div {
-      display: inline-table;
-      padding-right: 1.5rem;
-      padding-top: 12rem;
-      padding-left: 1.5rem;
-      margin: 0;
-    }
-    div p {
-      width: 90%;
-    }
-    h1 {
-      font-size: 5rem;
-      margin-top: 2rem;
-    }
-    h2 {
-      margin-bottom: 6rem;
-    }
-    h3 {
-      width: 90%;
-      margin-right: 11rem;
-    }
-    span.nom {
-      padding-top: 0.9rem;
-      display: flex;
-      margin-bottom: 1.6rem;
-      color: #f7fbfd;
-    }
-    span {
-      display: contents;
-    }
-    a.btn {
-      width: 85%;
-      display: flex;
-      padding-bottom: 1rem;
-    }
-  }
-   @media screen and (max-width: $break-small) {
     blockquote.blockquote.blockquote-reverse {
       padding-right: 0;
-    }
-    p.mb-0 {
-      width: 100%;
-      padding-right: 1.6rem;
-    }
-    div.blockquote-footer {
-      width: 100%;
-      padding-right: 0 !important;
     }
   }
 }
 
 #contact {
+  > div {
+    width: 100%;
+  }
   .content {
     width: 100%;
     padding: 0;
@@ -450,18 +487,30 @@ section.container-fluid {
     display: flex;
     flex-direction: row;
     padding-top: 1.5rem;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+    }
     div {
       display: flex;
       flex-direction: column;
-      padding-top: 1.5rem;
-      width: 100%;
-      padding-right: 3rem;
+      width: 42%;
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+      }
     }
     .text {
+      padding: 1.5rem 1.5rem 0 0;
+      @media screen and (max-width: $break-small) {
+        padding-top: 0px;
+        padding-right: 0px;
+      }
       p {
         margin-top: 0;
         margin-bottom: 10;
         width: 100%;
+        @media screen and (max-width: $break-small) {
+          width: 100% !important;
+        }
       }
       > * {
         width: auto;
@@ -474,6 +523,9 @@ section.container-fluid {
     h2 {
       color: $color-white-broken;
       padding-top: 1rem;
+      @media screen and (max-width: $break-small) {
+        margin-bottom: 2rem;
+      }
     }
     p {
       letter-spacing: .9px;
@@ -483,34 +535,16 @@ section.container-fluid {
     }
   }
   @media screen and (max-width: $break-small) {
-    h2{
-      margin-bottom: 0;
+    iframe {
+      height: 300px;
     }
-    div.text {
-      padding-top: 0px;
-      padding-right: 0px;
-      .text p {
-      width: 100% !important;
-      }
-    }
-    div.content {
-      flex-direction: column;
-        div {
-          flex-direction: column;
-          padding-bottom: 1rem;
-        }
-        iframe {
-          width: 120%;
-          height: 300px;
-        }
-    }
-  }  
+  } 
 }
 
 @media screen and (max-width: $break-small) {
   div {
     h2.book {
-       margin-bottom: 2rem;
+      margin-top: 2rem;
     }
   }
 }
@@ -519,52 +553,81 @@ section.container-fluid {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  @media screen and (max-width: $break-small) {
+    padding: 0;
+    flex-flow: column !important;
+  }
+
+  h2.book {
+
+  }
 
   > div {
     width: 18%;
+    @media screen and (max-width: $break-small) {
+      padding: 0;
+      width: 100%;
+    }
   }
   a {
     text-decoration: none;
   }
   img {
     width: 100%;
-    max-height: 75%;
+    max-height: 80%;
   }
   figcaption {
     color: $color-white-broken;
     letter-spacing: 1.3px;
     padding-top: 0.5rem;
-  }
-  @media screen and (max-width: $break-small) {
-    div#book{
-      padding: 0;
-      display: flex;
-      flex-flow: column !important;
-      justify-content: space-between;
-    }
-    div {
-      padding: 0;
-      width: 100%;
-    }
   } 
 }
 
 #cv {
   letter-spacing: .9px;
+  width: 85%;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
 
   div.group, div.group3 {
     padding-top: 0;
     display: flex;
     flex-flow: nowrap;
     justify-content: space-between;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+    }
     div.design {
       align-items: right;
+        @media screen and (max-width: $break-small) {
+          align-items: left !important;
+        }
     }
   }
   div.me {
-    padding: 4rem 0 0 0;
+    h1 {
+      @media screen and (max-width: $break-small) {
+        margin: 0;
+      }
+    }
     .btn {
       width: 230px;
+      @media screen and (max-width: $break-small) {
+        padding: 0;
+        margin: 0;
+        flex-shrink: 1;
+        width: auto;
+        align-self: start;
+      }
+      a {
+        text-decoration: none;
+        color: $color-mise-en-avant;
+      }
     }
     p {
       margin-top: 1rem;
@@ -574,57 +637,96 @@ section.container-fluid {
     address {
       letter-spacing: 1px;
     }
-    a {
-      text-decoration: none;
-      color: $color-mise-en-avant;
-    }
   }
   div {
     display: flex;
     flex-direction: column;
     h4 {
-    color: $color-mise-en-avant;
-    font-size: 1.3rem;
-    padding: 1rem 0 0 0;
+      color: $color-mise-en-avant;
+      font-size: 1.3rem;
+      padding: 1rem 0 0 0;
+      @media screen and (max-width: $break-small) {
+          width: 80%;
+        }
     }
     h5 {
-    color: $color-white-broken;
-    font-size: 1rem;
+      color: $color-white-broken;
+      font-size: 1rem;
+      @media screen and (max-width: $break-small) {
+          padding-right: 2.5rem;
+      }
     }
   }
   p {
     width: 100%;
     margin: 0;
     padding: 0.5rem;
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+      padding-right: 1.9rem;
+    }
   }
-  div#pictos {
+  div.pictos {
     display: flex;
     flex-direction: row;
     div {
       padding-top: 0;
       width: 70%;
       flex-direction: column;
+      @media screen and (max-width: $break-small) {
+        width: 90%;
+      }
       .group1, .group2, .group3 {
         flex-direction: row;
+        @media screen and (max-width: $break-small) {
+          div.group1 {
+            width: 112%;
+          }
+        }
         p {
           width: 100%;
+          @media screen and (max-width: $break-small) {
+            width: 68px;
+          }
         }
         img {
           width: 100%;
+          @media screen and (max-width: $break-small) {
+            width: 55px;
+          }
         }
       }
     }
   }
   div.flags {
     width: 100%;
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: $break-small) {
+      flex-direction: row wrap;
+    }
     p {
-      display: flex;
-      align-items: center;
+      @media screen and (max-width: $break-small) {
+        padding: 1em 0;
+        text-align: center;
+      }
     }
     img {
       width: 100px;
+      height: 50px;
+      object-fit: cover;
+      @media screen and (max-width: $break-small) {
+        width: 200px;
+        height: 100px;
+      }
+      @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        width: 50px;
+        height: 25px;
+      }
     }
   }
   div.xp{
@@ -634,64 +736,8 @@ section.container-fluid {
     }
     h3 {
       padding-top: 2rem;
-    }
-  }
-  @media screen and (max-width: $break-small) {
-    div.me{
-      a.btn {
-        width: 80%;
-      }
-    }
-  }
-
-  @media screen and (max-width: $break-small) {
-    div#pictos div {
-      width: 90%;
-      .group1, .group2, .group3 {
-        p {
-          width: 68px;
-          img {
-          width: 55px;
-          }
-        }
-      }
-    }
-    h2 {
-      margin-bottom: 2rem;
-    }
-    div.inte, div.design {
-      h3 {
-      width: 100%;
-      }
-    } 
-    h4 {
-      width: 80%;
-    }
-    h5 {
-      padding-right: 2.5rem;
-    }
-    div.group {
-    display: flex;
-    flex-direction: column;
-    }
-    div.group1 {
-      width: 112%;
-    }
-    div.design {
-      align-items: left !important;
-    }
-    p {
-      padding-right:2.5rem;
-      width: 90%;
-    }
-    div.flags {
-      flex-direction: column;
-      padding-left: 2rem;
-      img {
-        width: 200px;
-      }
-      p {
-        padding-left: 0;
+      @media screen and (max-width: $break-small) {
+        width: 100%;
       }
     }
   }
@@ -703,14 +749,14 @@ footer {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: .5rem;
+    padding: 1.5rem;
+    justify-content: flex-end;
     div.credits {
       letter-spacing: 1.2px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       span.wow {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
       }
     }
   }

@@ -1,10 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600">
-<clipPath id="t">
-	<path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-</clipPath>
-<path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
-<path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-<path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"/>
-<path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-<path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="80px" height="40px" viewBox="0 0 80 40" enable-background="new 0 0 80 40" xml:space="preserve">
+<rect fill="#ED2939" width="80" height="40"/>
+<rect fill="#FFFFFF" width="53.334" height="40"/>
+<rect fill="#002395" width="26.668" height="40"/>
+<g>
+	<path fill="#00247D" d="M0,0v40h80V0H0z"/>
+	<path stroke="#FFFFFF" stroke-width="6" d="M0,0l80,40 M80,0L0,40"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_1_" points="40,20 80,20 80,40 40,40 0,40 0,20 0,0 40,0 80,0 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<path clip-path="url(#SVGID_2_)" stroke="#CF142B" stroke-width="4" d="M0,0l80,40 M80,0L0,40"/>
+	</g>
+	<path stroke="#FFFFFF" stroke-width="10" d="M40,0v40 M0,20h80"/>
+	<path stroke="#CF142B" stroke-width="6" d="M40,0v40 M0,20h80"/>
+</g>
 </svg>

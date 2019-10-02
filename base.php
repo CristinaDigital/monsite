@@ -12,8 +12,8 @@ function open_page($page, $num_page) {
  <head>
  	<title><?php echo $page; ?> - Cristina Asensio - Web-designer Intégrateur</title>
  	<meta charset="utf-8">
-    <meta name="description" content="Diplômée d'une formation de niveau III Web-designer intégrateur et Designer graphique. Je suis désireuse de mettre mes compétences a disposition de votre entréprise.>  
-    <meta name="keywords" content="Web-designer, intégrateur, html5, css3, js, jquery, javascript, graphiste, graphisme, designer, ui, ux, responsive, logos, flyers, charte graphique">
+    <meta name="description" content="Diplômée d'une formation de niveau III Web-designer intégrateur et Designer graphique. Je suis désireuse de mettre mes compétences a disposition de votre entréprise.">
+    <meta name="keywords" content="Webdesigner, intégrateur, html5, css3, js, jquery, javascript, graphiste, graphisme, designer, ui, ux, responsive, logos, flyers, charte graphique">
     <meta name="author" content="Cristina ASENSIO" />
     <meta name="copyright" content="© Cristina Asensio." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@ function open_page($page, $num_page) {
     <nav id="navtoggle" class="fluid-container">
         <div>
             <div>
-                <!-- <a href="index.php"> -->
+                <!-- <a href="/"> -->
                     <img src="img/picto-cristina.svg" title="picto cristina" alt="picto cristina">
                 <!-- </a> -->
             </div>
