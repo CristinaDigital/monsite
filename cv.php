@@ -11,7 +11,7 @@
 		<h2>Curriculum Vitae</h2>
 	    <div class="me">
 	    	<h1>Cristina Asensio</h1>
-	    	<p>34 ans</p>
+	    	<p>35 ans</p>
 	    	<address>
 	    		Paris 19<sup>e</sup> (75)
 	    		<br/>
@@ -24,6 +24,19 @@
 		       	<button type="button" class="btn-primary btn-lg">Téléchargez mon cv</button>
 	       </a>
 	   	</div>
+	   	<div class="xp">
+			<h3>Expériences</h3>
+			<h4>Graphiste multimédia</h4>
+		 	<p><span>2013-2015</span> - Aceite el Cortijo</p>
+			<p><span>2012</span>- Association Multi-gaming Greenpigs</p>
+			<p><span>2008-2009</span> - Restauration «Ô délices de paris»</p>
+			<p><span>2000-2017</span> - Communautés Jeux-Vidéos</p>
+			<h4>Photographie</h4>
+		 	<p>Missions «freelance»</p>
+		 	<h4>Community Management</h4>
+			<p>2015-2017 Associat° Multi-gaming «Greenpigs»</p>
+			<h4>Streaming (Animation d’une chaine Twitch)</h4>
+		</div>
 	    <div class="group">
 		    <div class="inte">
 		    	<h3>Formation Web</h3>
@@ -122,26 +135,17 @@
 				</div>
 		    </div>
 		</div>
-		<div class="xp">
-				<h3>Expériences</h3>
-				<h4>Graphiste multimédia</h4>
-		 		<p><span>2013-2015</span> - Aceite el Cortijo</p>
-				<p><span>2012</span>- Association Multi-gaming Greenpigs</p>
-				<p><span>2008-2009</span> - Restauration «Ô délices de paris»</p>
-				<p><span>2000-2017</span> - Communautés Jeux-Vidéos</p>
-				<h4>Photographie</h4>
-		 		<p>Missions «freelance»</p>
-		 		<h4>Community Management</h4>
-				<p>2015-2017 Associat° Multi-gaming «Greenpigs»</p>
-				<h4>Streaming (Animation d’une chaine Twitch)</h4>
-				<h3>&Eacute;tudes</h3>
+		<div class="etudes">
+			<h3>&Eacute;tudes</h3>
 				<h4>2001-2004 Lycée Raymond-Naves (31)</h4>
 				<p>Obtention d’un BEP métiers du secretariat 
 				(Action et Communication Administrative)</p>
 				<p>Niveau Bac STT
 				(Action et Communication Administrative)</p>
-				<h3>Hobbies</h3>
-				<p>Dessin, Nature &amp; Balades, Photographie, Jeux vidéos &amp; Gaming</p>
+			</div>
+		<div class="hobbies">
+			<h3>Hobbies</h3>
+			<p>Dessin, Nature &amp; Balades, Photographie, Jeux vidéos &amp; Gaming</p>
 		</div>
 	</div>		
 </section>

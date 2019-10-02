@@ -866,20 +866,20 @@ section.container-fluid > div div.input-group form input input#position {
   }
 }
 /* line 732, ../scss/style.scss */
-#cv div.xp {
+#cv div.xp div.hobbies div.etudes {
   padding-bottom: 1rem;
 }
 /* line 734, ../scss/style.scss */
-#cv div.xp span {
+#cv div.xp div.hobbies div.etudes span {
   color: #f7fbfd;
 }
 /* line 737, ../scss/style.scss */
-#cv div.xp h3 {
+#cv div.xp div.hobbies div.etudes h3 {
   padding-top: 2rem;
 }
 @media screen and (max-width: 1000px) {
   /* line 737, ../scss/style.scss */
-  #cv div.xp h3 {
+  #cv div.xp div.hobbies div.etudes h3 {
     width: 100%;
   }
 }
