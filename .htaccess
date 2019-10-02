@@ -1,5 +1,11 @@
 Options +FollowSymLinks
 RewriteEngine on 
+# Protect files
+RewriteCond %{REQUEST_URI} ^/(.git|README.md)
+RewriteRule ^(.*)$ / [R=302,L]
+RewriteCond %{REQUEST_URI} .*.rb
+RewriteRule ^(.*)$ / [R=302,L]
+#
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php

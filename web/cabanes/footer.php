@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="credits">
-            <span>&#9400; <?php echo date('Y'); ?> - Les cabanes de Fontaine-Châtel</span>
+            <span>&#9400; <?php date_default_timezone_set('UTC'); echo date('Y'); ?> - Les cabanes de Fontaine-Châtel</span>
             <span>Site réalisé par Cristina Asensio</span>
         </div>
     </footer>
