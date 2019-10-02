@@ -31,6 +31,9 @@
 			<p><span>2012</span>- Association Multi-gaming Greenpigs</p>
 			<p><span>2008-2009</span> - Restauration «Ô délices de paris»</p>
 			<p><span>2000-2017</span> - Communautés Jeux-Vidéos</p>
+			<p><span>2018 Mars-Août</span> - Réseau Interministériel de l’État (RIE) Services du Premier Ministre | DINSIC (Direction interministérielle des systèmes d’information et de communication de l’État)</p>
+			<h4>Intégration</h4>
+			<p><span>2018 Mars-Août</span> - Réseau Interministériel de l’État (RIE) Services du Premier Ministre | DINSIC (Direction interministérielle des systèmes d’information et de communication de l’État)</p>
 			<h4>Photographie</h4>
 		 	<p>Missions «freelance»</p>
 		 	<h4>Community Management</h4>
