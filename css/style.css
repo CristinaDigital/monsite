@@ -1,59 +1,67 @@
-@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css';
-@import 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css';
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css";
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 @font-face {
   font-family: Quicksand-Bold;
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/Quicksand-Bold.otf');
+  src: url("../fonts/Quicksand-Bold.otf");
 }
 @font-face {
   font-family: Quicksand-Regular;
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/Quicksand-Regular.otf');
+  src: url("../fonts/Quicksand-Regular.otf");
 }
 @font-face {
   font-family: AdventPro-Bold;
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/AdventPro-Bold.ttf');
+  src: url("../fonts/AdventPro-Bold.ttf");
 }
 @font-face {
   font-family: HelveticaNeueLTStd-thin;
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/HelveticaNeueLTStd-thin.otf');
+  src: url("../fonts/HelveticaNeueLTStd-thin.otf");
 }
 @font-face {
   font-family: HelveticaNeueLTStd-fin;
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/HelveticaNeueLTStd-fin.otf');
+  src: url("../fonts/HelveticaNeueLTStd-fin.otf");
 }
+/* line 83, ../scss/style.scss */
 * {
   box-sizing: border-box;
 }
+
+/* line 87, ../scss/style.scss */
 img {
   vertical-align: middle;
 }
+
+/* line 91, ../scss/style.scss */
 body {
-  font-family: 'HelveticaNeueLTStd-thin', Helvetica, sans-serif, Arial;
+  font-family: "HelveticaNeueLTStd-thin", Helvetica, sans-serif, Arial;
   font-size: 16px;
   color: #b4b4b7;
-  background: linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
-  background: -webkit-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
-  background: -moz-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
-  background: -o-linear-gradient(rgba(10, 17, 41, .7), rgba(10, 17, 41, .7)), url('../img/bg.jpg') no-repeat fixed;
+  background: linear-gradient(rgba(10, 17, 41, 0.7), rgba(10, 17, 41, 0.7)), url("../img/bg.jpg") no-repeat fixed;
+  background: -webkit-linear-gradient(rgba(10, 17, 41, 0.7), rgba(10, 17, 41, 0.7)), url("../img/bg.jpg") no-repeat fixed;
+  background: -moz-linear-gradient(rgba(10, 17, 41, 0.7), rgba(10, 17, 41, 0.7)), url("../img/bg.jpg") no-repeat fixed;
+  background: -o-linear-gradient(rgba(10, 17, 41, 0.7), rgba(10, 17, 41, 0.7)), url("../img/bg.jpg") no-repeat fixed;
   background-size: cover;
 }
 @media screen and (max-width: 1000px) {
+  /* line 91, ../scss/style.scss */
   body {
-    background: linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
-    background: -webkit-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
-    background: -moz-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
-    background: -o-linear-gradient(rgba(10, 17, 41, .4), rgba(10, 17, 41, .4)), url('../img/bg.jpg') no-repeat fixed;
+    background: linear-gradient(rgba(10, 17, 41, 0.4), rgba(10, 17, 41, 0.4)), url("../img/bg.jpg") no-repeat fixed;
+    background: -webkit-linear-gradient(rgba(10, 17, 41, 0.4), rgba(10, 17, 41, 0.4)), url("../img/bg.jpg") no-repeat fixed;
+    background: -moz-linear-gradient(rgba(10, 17, 41, 0.4), rgba(10, 17, 41, 0.4)), url("../img/bg.jpg") no-repeat fixed;
+    background: -o-linear-gradient(rgba(10, 17, 41, 0.4), rgba(10, 17, 41, 0.4)), url("../img/bg.jpg") no-repeat fixed;
   }
 }
+
+/* line 109, ../scss/style.scss */
 .btn-navigation {
   position: absolute;
   right: 30px;
@@ -63,28 +71,34 @@ body {
   display: none;
 }
 @media screen and (max-width: 1000px) {
+  /* line 109, ../scss/style.scss */
   .btn-navigation {
     display: block;
   }
 }
+/* line 120, ../scss/style.scss */
 .btn-navigation .barre {
   width: 30px;
   height: 3px;
   background: #df358d;
   margin-top: 5px;
-  transition: background 0.3s ease-in-out;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
+  transition: background .3s ease-in-out;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  -o-transition: background .3s ease-in-out;
 }
+/* line 131, ../scss/style.scss */
 .btn-navigation .white {
   background: #f7fbfd;
 }
+
+/* line 136, ../scss/style.scss */
 nav.fluid-container {
   width: 100%;
   height: 0;
   position: absolute;
 }
+/* line 141, ../scss/style.scss */
 nav.fluid-container > div {
   position: relative;
   width: 15%;
@@ -92,31 +106,36 @@ nav.fluid-container > div {
   z-index: 1030;
 }
 @media screen and (max-width: 1000px) {
+  /* line 141, ../scss/style.scss */
   nav.fluid-container > div {
     width: 100%;
   }
 }
+/* line 149, ../scss/style.scss */
 nav.fluid-container > div img {
   max-width: 100%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 149, ../scss/style.scss */
   nav.fluid-container > div img {
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 1000px) {
+  /* line 155, ../scss/style.scss */
   nav.fluid-container > div ul.nav {
     background: linear-gradient(#0a1129, #0a1129);
-    transition: transform 0.6s ease-in-out;
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    -webkit-transition: -webkit-transform .6s ease-in-out;
+    -moz-transition: -moz-transform .6s ease-in-out;
+    -o-transition: -o-transform .6s ease-in-out;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -o-transform: translateX(-100%);
   }
 }
+/* line 168, ../scss/style.scss */
 nav.fluid-container > div ul.nav.isopen {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
@@ -124,47 +143,54 @@ nav.fluid-container > div ul.nav.isopen {
   -o-transform: translateX(0%);
 }
 @media screen and (max-width: 1000px) {
+  /* line 174, ../scss/style.scss */
   nav.fluid-container > div div.logos-container {
     background: linear-gradient(#0a1129, #0a1129);
-    transition: transform 0.6s ease-in-out;
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    -webkit-transition: -webkit-transform .6s ease-in-out;
+    -moz-transition: -moz-transform .6s ease-in-out;
+    -o-transition: -o-transform .6s ease-in-out;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -o-transform: translateX(-100%);
   }
 }
+/* line 188, ../scss/style.scss */
 nav.fluid-container > div div.logos-container.isopen {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
   -o-transform: translateX(0%);
 }
+/* line 195, ../scss/style.scss */
 nav.fluid-container > div div.logos {
   padding-top: 12rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 195, ../scss/style.scss */
   nav.fluid-container > div div.logos {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* line 195, ../scss/style.scss */
   nav.fluid-container > div div.logos {
     padding-top: 6rem;
   }
 }
+/* line 204, ../scss/style.scss */
 nav.fluid-container > div div.logos a {
   padding: 0 10px;
   color: #f7fbfd;
-  opacity: 0.2;
-  transition: color 0.1s ease-out;
-  -webkit-transition: color 0.1s ease-out;
-  -moz-transition: color 0.1s ease-out;
-  -o-transition: color 0.1s ease-out;
+  opacity: .2;
+  transition: color .1s ease-out;
+  -webkit-transition: color .1s ease-out;
+  -moz-transition: color .1s ease-out;
+  -o-transition: color .1s ease-out;
 }
+/* line 213, ../scss/style.scss */
 nav.fluid-container > div div.logos a:hover {
   color: #e10073;
   opacity: 1;
@@ -173,67 +199,87 @@ nav.fluid-container > div div.logos a:hover {
   -moz-transition: color 2s ease-out;
   -o-transition: color 2s ease-out;
 }
-nav.fluid-container > div ul, nav.fluid-container > div div {
+/* line 223, ../scss/style.scss */
+nav.fluid-container > div ul,
+nav.fluid-container > div div {
   width: 100%;
   padding-top: 3rem;
 }
+/* line 228, ../scss/style.scss */
 nav.fluid-container > div div {
   text-align: center;
 }
+/* line 231, ../scss/style.scss */
 nav.fluid-container > div li.nav-item {
   height: 4rem;
   margin-top: 1rem;
   font-size: 2rem;
   text-decoration: none;
 }
+/* line 237, ../scss/style.scss */
 nav.fluid-container > div li.active {
   padding-left: 0;
   border-left: 0.5rem solid #df358d;
 }
+/* line 241, ../scss/style.scss */
 nav.fluid-container > div li {
-  padding-left: 0.5rem;
+  padding-left: .5rem;
   display: flex;
   align-items: center;
 }
+/* line 245, ../scss/style.scss */
 nav.fluid-container > div li :hover {
-  background: rgba(255, 255, 255, .02);
+  background: rgba(255, 255, 255, 0.02);
 }
-nav.fluid-container > div a.nav-link, nav.fluid-container > div a.nav-link.active {
+/* line 249, ../scss/style.scss */
+nav.fluid-container > div a.nav-link,
+nav.fluid-container > div a.nav-link.active {
   color: #f7fbfd;
 }
+/* line 253, ../scss/style.scss */
 nav.fluid-container > div a.nav-link {
   padding-left: 2rem;
+  width: 100%;
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* line 253, ../scss/style.scss */
   nav.fluid-container > div a.nav-link {
     padding-left: 1rem;
     font-size: 1.8rem;
   }
 }
+/* line 260, ../scss/style.scss */
 nav.fluid-container > div a.nav-link :hover {
   color: #df358d;
 }
+/* line 264, ../scss/style.scss */
 nav.fluid-container > div a nav-item {
   padding: 4.5rem 4rem;
 }
+/* line 267, ../scss/style.scss */
 nav.fluid-container > div .credits {
   color: #f7fbfd;
 }
+/* line 270, ../scss/style.scss */
 nav.fluid-container > div .fa {
   font-size: 1.7rem;
 }
+
+/* line 276, ../scss/style.scss */
 section.container-fluid {
   position: relative;
   width: 100%;
   padding: 0;
 }
+/* line 281, ../scss/style.scss */
 section.container-fluid > div {
   margin-left: 15%;
-  background: rgba(11, 16, 35, .6);
+  background: rgba(11, 16, 35, 0.6);
   min-height: calc(100vh - 50px);
   padding: 1.5rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 281, ../scss/style.scss */
   section.container-fluid > div {
     padding-right: 1.5rem;
     padding-top: 12rem;
@@ -241,77 +287,91 @@ section.container-fluid > div {
     margin: 0;
   }
 }
+/* line 293, ../scss/style.scss */
 section.container-fluid > div h1, section.container-fluid > div h1 > span.prenom {
   color: #f7fbfd;
-  font-family: 'AdventPro-Bold', sans-serif, Arial;
+  font-family: "AdventPro-Bold", sans-serif, Arial;
   font-size: 5rem;
   line-height: 4rem;
   margin: 1.6rem 0 1rem 0;
 }
 @media screen and (max-width: 1000px) {
+  /* line 293, ../scss/style.scss */
   section.container-fluid > div h1, section.container-fluid > div h1 > span.prenom {
     margin-top: 2rem;
     line-height: 4rem;
   }
 }
+/* line 303, ../scss/style.scss */
 section.container-fluid > div h1 span.nom, section.container-fluid > div h1 > span.prenom span.nom {
   color: #f7fbfd;
-  font-family: 'HelveticaNeueLTStd-fin', sans-serif, Arial;
+  font-family: "HelveticaNeueLTStd-fin", sans-serif, Arial;
   font-size: 5rem;
 }
+/* line 308, ../scss/style.scss */
 section.container-fluid > div h1 span, section.container-fluid > div h1 > span.prenom span {
-  font-family: 'AdventPro-Bold', sans-serif, Arial;
+  font-family: "AdventPro-Bold", sans-serif, Arial;
   color: #df358d;
   font-size: 12rem;
   line-height: 0;
   letter-spacing: 0;
 }
+/* line 316, ../scss/style.scss */
 section.container-fluid > div > h2 {
   display: inline-block;
   width: auto;
   border-bottom: 0.3rem solid #df358d;
 }
+/* line 321, ../scss/style.scss */
 section.container-fluid > div h2 {
   color: #f7fbfd;
   padding-top: 3rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 321, ../scss/style.scss */
   section.container-fluid > div h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
+/* line 329, ../scss/style.scss */
 section.container-fluid > div hr {
   border-bottom: 0.3rem solid #df358d;
   width: 122px;
   margin: 0;
   text-align: left;
 }
+/* line 335, ../scss/style.scss */
 section.container-fluid > div h3 {
-  font-family: 'HelveticaNeueLTStd-fin', sans-serif, Arial;
+  font-family: "HelveticaNeueLTStd-fin", sans-serif, Arial;
   color: #df358d;
   font-size: 2rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 335, ../scss/style.scss */
   section.container-fluid > div h3 {
     width: 100%;
     margin-right: 11rem;
   }
 }
+/* line 344, ../scss/style.scss */
 section.container-fluid > div p {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
   width: 43%;
-  letter-spacing: 0.9px;
+  letter-spacing: .9px;
 }
 @media screen and (max-width: 1200px) {
+  /* line 344, ../scss/style.scss */
   section.container-fluid > div p {
     width: 100%;
   }
 }
+/* line 352, ../scss/style.scss */
 section.container-fluid > div p span.m-avant {
   color: #5287f1;
 }
+/* line 356, ../scss/style.scss */
 section.container-fluid > div .btn {
   width: 190px;
   margin-left: 2px;
@@ -319,12 +379,14 @@ section.container-fluid > div .btn {
   padding: 0;
 }
 @media screen and (max-width: 1000px) {
+  /* line 356, ../scss/style.scss */
   section.container-fluid > div .btn {
     margin: 0 auto;
     display: flex;
     padding-bottom: 1rem;
   }
 }
+/* line 367, ../scss/style.scss */
 section.container-fluid > div .btn > button {
   width: 100%;
   padding: 1rem;
@@ -333,34 +395,42 @@ section.container-fluid > div .btn > button {
   border-radius: 0;
   cursor: pointer;
 }
+/* line 376, ../scss/style.scss */
 section.container-fluid > div button.btn-primary {
   background-color: #df358d;
   border: #df358d;
 }
+/* line 380, ../scss/style.scss */
 section.container-fluid > div button.btn-primary:hover {
   color: #f7fbfd;
   background-color: #e10073;
   border-color: #e10073;
 }
+/* line 385, ../scss/style.scss */
 section.container-fluid > div button.btn-primary:focus {
-  box-shadow: 0 0 0 3px rgba(255, 10, 135, .1);
+  box-shadow: 0 0 0 3px rgba(255, 10, 135, 0.1);
 }
+/* line 388, ../scss/style.scss */
 section.container-fluid > div button.btn-secondary {
-  background-color: rgba(247, 251, 253, .1);
-  border: rgba(247, 251, 253, .1);
+  background-color: rgba(247, 251, 253, 0.1);
+  border: rgba(247, 251, 253, 0.1);
 }
+/* line 392, ../scss/style.scss */
 section.container-fluid > div button.btn-secondary:hover {
-  background-color: rgba(247, 251, 253, .15);
-  border-color: rgba(247, 251, 253, .15);
+  background-color: rgba(247, 251, 253, 0.15);
+  border-color: rgba(247, 251, 253, 0.15);
 }
+/* line 396, ../scss/style.scss */
 section.container-fluid > div button.btn-secondary:focus {
-  box-shadow: 0 0 0 3px rgba(165, 173, 180, .1);
+  box-shadow: 0 0 0 3px rgba(165, 173, 180, 0.1);
 }
+/* line 399, ../scss/style.scss */
 section.container-fluid > div div {
   display: flex;
   flex-direction: row;
   padding-top: 1.5rem;
 }
+/* line 403, ../scss/style.scss */
 section.container-fluid > div div span.fa.fa-quote-left {
   color: #354669;
   font-size: 5rem;
@@ -368,71 +438,96 @@ section.container-fluid > div div span.fa.fa-quote-left {
   width: 4rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 403, ../scss/style.scss */
   section.container-fluid > div div span.fa.fa-quote-left {
     width: 10%;
   }
 }
-section.container-fluid > div div .blockquote, section.container-fluid > div div .blockquote-footer {
-  font-family: 'AdventPro-Bold', sans-serif, Arial;
+/* line 412, ../scss/style.scss */
+section.container-fluid > div div .blockquote,
+section.container-fluid > div div .blockquote-footer {
+  font-family: "AdventPro-Bold", sans-serif, Arial;
   width: 80%;
 }
+/* line 417, ../scss/style.scss */
 section.container-fluid > div div .blockquote-footer {
   display: flex;
   justify-content: center;
 }
 @media screen and (max-width: 1000px) {
+  /* line 417, ../scss/style.scss */
   section.container-fluid > div div .blockquote-footer {
     width: 100%;
     justify-content: flex-end;
   }
 }
 @media screen and (max-width: 1000px) {
+  /* line 427, ../scss/style.scss */
   section.container-fluid > div p.mb-0 {
     width: 100%;
     padding-left: 1.6rem;
   }
 }
+/* line 432, ../scss/style.scss */
 section.container-fluid > div div.input-group form {
   padding-top: 2rem;
 }
+/* line 434, ../scss/style.scss */
 section.container-fluid > div div.input-group form p {
   font-size: 1.5rem;
   width: 150%;
   margin: 0;
   display: flex;
 }
-section.container-fluid > div div.input-group form p #nom, section.container-fluid > div div.input-group form p #compagnie {
+/* line 439, ../scss/style.scss */
+section.container-fluid > div div.input-group form p #nom,
+section.container-fluid > div div.input-group form p #compagnie {
   margin-right: 100px;
 }
+/* line 444, ../scss/style.scss */
 section.container-fluid > div div.input-group form h3 {
-  font-family: 'HelveticaNeueLTStd-fin', sans-serif, Arial;
+  font-family: "HelveticaNeueLTStd-fin", sans-serif, Arial;
   color: #df358d;
   font-size: 1.6rem;
   padding-bottom: 1rem;
 }
-section.container-fluid > div div.input-group form textarea#message, section.container-fluid > div div.input-group form input {
+/* line 450, ../scss/style.scss */
+section.container-fluid > div div.input-group form textarea#message,
+section.container-fluid > div div.input-group form input {
   width: 150%;
-  font-family: 'HelveticaNeueLTStd-thin', Helvetica, sans-serif, Arial;
+  font-family: "HelveticaNeueLTStd-thin", Helvetica, sans-serif, Arial;
   font-size: 16px;
-  letter-spacing: 0.9px;
+  letter-spacing: .9px;
   color: #b4b4b7;
-  background: rgba(30, 26, 52, .33);
-  border: 1px solid rgba(184, 178, 216, .2);
-  padding: 0.7rem;
+  background: rgba(30, 26, 52, 0.33);
+  border: 1px solid rgba(184, 178, 216, 0.2);
+  padding: .7rem;
   margin-bottom: 3rem;
   resize: none;
 }
-section.container-fluid > div div.input-group form textarea#message input#prenom, section.container-fluid > div div.input-group form input input#prenom, section.container-fluid > div div.input-group form textarea#message input#email, section.container-fluid > div div.input-group form input input#email, section.container-fluid > div div.input-group form textarea#message input#compagnie, section.container-fluid > div div.input-group form input input#compagnie, section.container-fluid > div div.input-group form textarea#message input#position, section.container-fluid > div div.input-group form input input#position {
+/* line 462, ../scss/style.scss */
+section.container-fluid > div div.input-group form textarea#message input#prenom,
+section.container-fluid > div div.input-group form textarea#message input#email,
+section.container-fluid > div div.input-group form textarea#message input#compagnie,
+section.container-fluid > div div.input-group form textarea#message input#position,
+section.container-fluid > div div.input-group form input input#prenom,
+section.container-fluid > div div.input-group form input input#email,
+section.container-fluid > div div.input-group form input input#compagnie,
+section.container-fluid > div div.input-group form input input#position {
   width: 70%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 473, ../scss/style.scss */
   section.container-fluid blockquote.blockquote.blockquote-reverse {
     padding-right: 0;
   }
 }
+
+/* line 480, ../scss/style.scss */
 #contact > div {
   width: 100%;
 }
+/* line 483, ../scss/style.scss */
 #contact .content {
   width: 100%;
   padding: 0;
@@ -442,115 +537,143 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   padding-top: 1.5rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 483, ../scss/style.scss */
   #contact .content {
     flex-direction: column;
   }
 }
+/* line 493, ../scss/style.scss */
 #contact .content div {
   display: flex;
   flex-direction: column;
   width: 42%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 493, ../scss/style.scss */
   #contact .content div {
     width: 100%;
   }
 }
+/* line 501, ../scss/style.scss */
 #contact .content .text {
   padding: 1.5rem 1.5rem 0 0;
 }
 @media screen and (max-width: 1000px) {
+  /* line 501, ../scss/style.scss */
   #contact .content .text {
     padding-top: 0px;
     padding-right: 0px;
   }
 }
+/* line 507, ../scss/style.scss */
 #contact .content .text p {
   margin-top: 0;
   margin-bottom: 10;
   width: 100%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 507, ../scss/style.scss */
   #contact .content .text p {
     width: 100% !important;
   }
 }
+/* line 515, ../scss/style.scss */
 #contact .content .text > * {
   width: auto;
 }
+/* line 518, ../scss/style.scss */
 #contact .content .text .btn {
   margin: 0 auto;
   width: 250px;
 }
+/* line 523, ../scss/style.scss */
 #contact .content h2 {
   color: #f7fbfd;
   padding-top: 1rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 523, ../scss/style.scss */
   #contact .content h2 {
     margin-bottom: 2rem;
   }
 }
+/* line 530, ../scss/style.scss */
 #contact .content p {
-  letter-spacing: 0.9px;
+  letter-spacing: .9px;
 }
+/* line 533, ../scss/style.scss */
 #contact .content button {
   margin-top: 2rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 538, ../scss/style.scss */
   #contact iframe {
     height: 300px;
   }
 }
+
 @media screen and (max-width: 1000px) {
+  /* line 546, ../scss/style.scss */
   div h2.book {
     margin-top: 2rem;
   }
 }
+/* line 552, ../scss/style.scss */
 #book {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 @media screen and (max-width: 1000px) {
+  /* line 552, ../scss/style.scss */
   #book {
     padding: 0;
     flex-flow: column !important;
   }
 }
+/* line 565, ../scss/style.scss */
 #book > div {
   width: 18%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 565, ../scss/style.scss */
   #book > div {
     padding: 0;
     width: 100%;
   }
 }
+/* line 572, ../scss/style.scss */
 #book a {
   text-decoration: none;
 }
+/* line 575, ../scss/style.scss */
 #book img {
   width: 100%;
   max-height: 80%;
 }
+/* line 579, ../scss/style.scss */
 #book figcaption {
   color: #f7fbfd;
   letter-spacing: 1.3px;
   padding-top: 0.5rem;
 }
+
+/* line 586, ../scss/style.scss */
 #cv {
-  letter-spacing: 0.9px;
+  letter-spacing: .9px;
   width: 85%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 586, ../scss/style.scss */
   #cv {
     width: 100%;
   }
 }
+/* line 593, ../scss/style.scss */
 #cv h2 {
   margin-bottom: 2rem;
 }
+/* line 597, ../scss/style.scss */
 #cv div.group, #cv div.group3 {
   padding-top: 0;
   display: flex;
@@ -558,27 +681,33 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   justify-content: space-between;
 }
 @media screen and (max-width: 1000px) {
+  /* line 597, ../scss/style.scss */
   #cv div.group, #cv div.group3 {
     flex-direction: column;
   }
 }
+/* line 605, ../scss/style.scss */
 #cv div.group div.design, #cv div.group3 div.design {
   align-items: right;
 }
 @media screen and (max-width: 1000px) {
+  /* line 605, ../scss/style.scss */
   #cv div.group div.design, #cv div.group3 div.design {
     align-items: left !important;
   }
 }
 @media screen and (max-width: 1000px) {
+  /* line 613, ../scss/style.scss */
   #cv div.me h1 {
     margin: 0;
   }
 }
+/* line 618, ../scss/style.scss */
 #cv div.me .btn {
   width: 230px;
 }
 @media screen and (max-width: 1000px) {
+  /* line 618, ../scss/style.scss */
   #cv div.me .btn {
     padding: 0;
     margin: 0;
@@ -587,90 +716,110 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
     align-self: start;
   }
 }
+/* line 627, ../scss/style.scss */
 #cv div.me .btn a {
   text-decoration: none;
   color: #5287f1;
 }
+/* line 632, ../scss/style.scss */
 #cv div.me p {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0;
 }
+/* line 637, ../scss/style.scss */
 #cv div.me address {
   letter-spacing: 1px;
 }
+/* line 641, ../scss/style.scss */
 #cv div {
   display: flex;
   flex-direction: column;
 }
+/* line 644, ../scss/style.scss */
 #cv div h4 {
   color: #5287f1;
   font-size: 1.3rem;
   padding: 1rem 0 0 0;
 }
 @media screen and (max-width: 1000px) {
+  /* line 644, ../scss/style.scss */
   #cv div h4 {
     width: 80%;
   }
 }
+/* line 652, ../scss/style.scss */
 #cv div h5 {
   color: #f7fbfd;
   font-size: 1rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 652, ../scss/style.scss */
   #cv div h5 {
     padding-right: 2.5rem;
   }
 }
+/* line 660, ../scss/style.scss */
 #cv p {
   width: 100%;
   margin: 0;
   padding: 0.5rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 660, ../scss/style.scss */
   #cv p {
     width: 100%;
     padding-right: 1.9rem;
   }
 }
+/* line 669, ../scss/style.scss */
 #cv div.pictos {
   display: flex;
   flex-direction: row;
 }
+/* line 672, ../scss/style.scss */
 #cv div.pictos div {
   padding-top: 0;
   width: 70%;
   flex-direction: column;
 }
 @media screen and (max-width: 1000px) {
+  /* line 672, ../scss/style.scss */
   #cv div.pictos div {
     width: 90%;
   }
 }
+/* line 679, ../scss/style.scss */
 #cv div.pictos div .group1, #cv div.pictos div .group2, #cv div.pictos div .group3 {
   flex-direction: row;
 }
 @media screen and (max-width: 1000px) {
+  /* line 682, ../scss/style.scss */
   #cv div.pictos div .group1 div.group1, #cv div.pictos div .group2 div.group1, #cv div.pictos div .group3 div.group1 {
     width: 112%;
   }
 }
+/* line 686, ../scss/style.scss */
 #cv div.pictos div .group1 p, #cv div.pictos div .group2 p, #cv div.pictos div .group3 p {
   width: 100%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 686, ../scss/style.scss */
   #cv div.pictos div .group1 p, #cv div.pictos div .group2 p, #cv div.pictos div .group3 p {
     width: 68px;
   }
 }
+/* line 692, ../scss/style.scss */
 #cv div.pictos div .group1 img, #cv div.pictos div .group2 img, #cv div.pictos div .group3 img {
   width: 100%;
 }
 @media screen and (max-width: 1000px) {
+  /* line 692, ../scss/style.scss */
   #cv div.pictos div .group1 img, #cv div.pictos div .group2 img, #cv div.pictos div .group3 img {
     width: 55px;
   }
 }
+/* line 701, ../scss/style.scss */
 #cv div.flags {
   width: 100%;
   display: flex;
@@ -678,55 +827,68 @@ section.container-fluid > div div.input-group form textarea#message input#prenom
   align-items: center;
 }
 @media screen and (max-width: 1000px) {
+  /* line 701, ../scss/style.scss */
   #cv div.flags {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 1000px) {
+  /* line 701, ../scss/style.scss */
   #cv div.flags {
     flex-direction: row wrap;
   }
 }
 @media screen and (max-width: 1000px) {
+  /* line 712, ../scss/style.scss */
   #cv div.flags p {
     padding: 1em 0;
     text-align: center;
   }
 }
+/* line 718, ../scss/style.scss */
 #cv div.flags img {
   width: 100px;
   height: 50px;
   object-fit: cover;
 }
 @media screen and (max-width: 1000px) {
+  /* line 718, ../scss/style.scss */
   #cv div.flags img {
     width: 200px;
     height: 100px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* line 718, ../scss/style.scss */
   #cv div.flags img {
     width: 50px;
     height: 25px;
   }
 }
+/* line 732, ../scss/style.scss */
 #cv div.xp {
   padding-bottom: 1rem;
 }
+/* line 734, ../scss/style.scss */
 #cv div.xp span {
   color: #f7fbfd;
 }
+/* line 737, ../scss/style.scss */
 #cv div.xp h3 {
   padding-top: 2rem;
 }
 @media screen and (max-width: 1000px) {
+  /* line 737, ../scss/style.scss */
   #cv div.xp h3 {
     width: 100%;
   }
 }
+
+/* line 746, ../scss/style.scss */
 footer {
   height: 40px;
 }
+/* line 748, ../scss/style.scss */
 footer div.container-fluid {
   height: 100%;
   display: flex;
@@ -734,11 +896,13 @@ footer div.container-fluid {
   padding: 1.5rem;
   justify-content: flex-end;
 }
+/* line 754, ../scss/style.scss */
 footer div.container-fluid div.credits {
   letter-spacing: 1.2px;
   display: flex;
   align-items: center;
 }
+/* line 758, ../scss/style.scss */
 footer div.container-fluid div.credits span.wow {
   font-size: 0.8rem;
 }
