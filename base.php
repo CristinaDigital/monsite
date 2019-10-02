@@ -55,7 +55,7 @@ function open_page($page, $num_page) {
             </ul>
             <div class="logos-container">
                 <div class="logos">
-                    <a href="https://www.linkedin.com/feed/" target="_blank"><span class="fa fa-linkedin-square" aria-hidden="true"></span></a>
+                    <a href="https://www.linkedin.com/in/cristina-asensio-a64559104/" target="_blank"><span class="fa fa-linkedin-square" aria-hidden="true"></span></a>
                     <a href="https://twitter.com/NithienGaming" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
                     <a href="https://www.facebook.com/CristinaDesignerGraphique/" target="_blank"><span class="fa fa-facebook-square" aria-hidden="true"></span></a>
                 </div>

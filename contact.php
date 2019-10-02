@@ -38,7 +38,7 @@
                 <p>christina.asensio@gmail.com</p>
 
                 <a class="btn" href="mailto:christina.asensio@gmail.com"><button type="submit" class="btn-primary btn-lg">Me Contacter</button></a>
-                <a class="btn" href="mailto:christina.asensio@gmail.com"><button type="submit" class="btn-secondary btn-lg">Linkedin</button></a>
+                <a class="btn" href="https://www.linkedin.com/in/cristina-asensio-a64559104/"><button type="submit" class="btn-secondary btn-lg">Linkedin</button></a>
             </div>
             <div>
                 <iframe src="https://snazzymaps.com/embed/23576" width="100%" height="500px" style="border:none;"></iframe>
